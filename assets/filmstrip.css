@@ -1,0 +1,140 @@
+/* One ribbon, two scales. Shared image planes stay in the same scene. */
+body[data-mode=film]{--bg:#141414;--film-ink:#e4e5da;--film-title:#e4e5da;--ink:var(--film-ink);--line:#41433d;--muted:#93968b;background:var(--film-background,#141414);color:var(--film-ink);height:100svh;overflow:hidden;transition:background 1.05s cubic-bezier(.2,.65,.2,1),color .75s cubic-bezier(.2,.65,.2,1)}
+body[data-mode=film] .top{position:fixed;inset:0 0 auto;height:104px;padding:30px 3.8%;pointer-events:none;z-index:6}
+body[data-mode=film] .top a,body[data-mode=film] .ruler{pointer-events:auto}
+body[data-mode=film] .brand{width:173px;height:27px}
+body[data-mode=film] .top nav{font-size:11px;gap:24px}
+body[data-mode=film] .ruler{gap:8px;height:40px}
+body[data-mode=film] .ruler button{width:2px;height:15px;background:currentColor;opacity:.2;transition:opacity .4s,width .6s,height .6s}
+body[data-mode=film] .ruler button:before{inset:-12px -4px}
+body[data-mode=film] .ruler button[aria-current=true]{height:15px;opacity:.9}
+body[data-mode=film] .ruler button:hover{opacity:1}
+body[data-mode=film][data-film-view=detail] .ruler button[aria-current=true]{width:25px;background:transparent;border:1px solid currentColor}
+.ruler-counter{font-size:9px;font-variant-numeric:tabular-nums;position:absolute;top:42px;left:50%;transform:translateX(-50%);white-space:nowrap;opacity:0;transition:opacity .4s}
+body[data-film-view=detail] .ruler-counter{opacity:.65}
+body[data-mode=film] #film{height:100svh;min-height:0;isolation:isolate}
+body[data-mode=film] .film-stage{position:absolute;inset:0;height:100%;cursor:grab;touch-action:none}
+body[data-mode=film] .film-stage.dragging{cursor:grabbing}
+#film-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+body[data-mode=film] .film-track{position:absolute;inset:0;display:block;transform:none;pointer-events:none}
+body[data-mode=film] .film-card{position:absolute;left:0;top:0;margin:0;width:48px;height:178px;pointer-events:auto;transform-origin:center;overflow:hidden;will-change:transform,width,height;outline-offset:5px!important}
+body[data-mode=film] .film-card img,body[data-mode=film] .film-card video{position:absolute;inset:0;width:100%;height:100%;object-position:center;pointer-events:none;filter:grayscale(1) brightness(.45);transition:filter .4s,opacity .45s}
+body[data-mode=film] .film-card video{opacity:0}
+body[data-mode=film] .film-card:hover img,body[data-mode=film] .film-card:hover video{filter:grayscale(0) brightness(.85)}
+body[data-mode=film] .film-stage.has-webgl .film-card img{visibility:hidden}
+body[data-mode=film][data-film-view=detail] .film-card[aria-current=true] video{opacity:1}
+body[data-mode=film] .film-card:focus-visible{outline:1px solid var(--ink)}
+body[data-mode=film][data-film-view=detail] .film-card img,body[data-mode=film][data-film-view=detail] .film-card video{filter:brightness(.28)}
+body[data-mode=film][data-film-view=detail] .film-card[aria-current=true] img,body[data-mode=film][data-film-view=detail] .film-card[aria-current=true] video{filter:none}
+.film-titles{position:absolute;inset:16.5% 10% auto;pointer-events:none;z-index:2;opacity:0;transition:opacity .3s}
+#film[data-view=detail] .film-titles{opacity:1}
+#film[data-view=detail][data-fit=full] .film-titles{opacity:0}
+#film-title{font-family:"Arial Narrow","Helvetica Neue",Arial,sans-serif;font-size:clamp(52px,9.2vw,148px);font-stretch:condensed;line-height:.86;font-weight:800;letter-spacing:-.055em;text-transform:uppercase;color:var(--film-title);transition:color .7s cubic-bezier(.2,.65,.2,1)}
+.film-title-line{display:flex;justify-content:space-between;white-space:nowrap}
+.film-title-line+.film-title-line{margin-top:.06em}
+.film-title-letter{display:inline-block;will-change:transform,opacity}
+.film-detail-controls{position:absolute;top:81%;left:50%;transform:translateX(-50%);z-index:3;text-align:center;opacity:0;pointer-events:none;transition:opacity .3s}
+#film[data-view=detail] .film-detail-controls{opacity:1;pointer-events:auto;transition-delay:.3s}
+.film-detail-controls button{display:inline-block;margin:0;font-size:10px;padding:8px 10px;white-space:nowrap}
+.film-metadata{font-size:10px;white-space:nowrap;opacity:.65;margin-bottom:9px}
+#film-fit{border-bottom:1px solid #ffffff50;padding-bottom:5px}
+#film-fit span{margin-left:12px}
+#film-back{margin-left:14px;opacity:.65}
+#film-back:hover{opacity:1}
+.film-project-copy{position:absolute;left:3.8%;bottom:34px;z-index:4;width:min(35vw,430px);opacity:0;transform:translateY(12px);pointer-events:none;transition:opacity .45s .2s,transform .55s .2s cubic-bezier(.16,1,.3,1);color:var(--film-ink)}
+#film[data-view=detail] .film-project-copy:not([hidden]){opacity:1;transform:none}
+.film-project-kind{font-size:11px;line-height:1.2;text-transform:uppercase;letter-spacing:.04em;opacity:.62;margin-bottom:8px}
+.film-project-description{font-size:clamp(14px,1.05vw,17px);line-height:1.34;max-width:42ch;text-wrap:balance}
+.film-project-role{font-size:11px;line-height:1.35;opacity:.58;margin-top:10px}
+.film-project-link{display:inline-block;margin-top:14px;color:inherit;font-size:11px;line-height:1.2;text-decoration:none;border-bottom:1px solid color-mix(in srgb,currentColor 35%,transparent);padding-bottom:3px;pointer-events:auto;transition:border-color .2s,opacity .2s}
+.film-project-link:hover,.film-project-link:focus-visible{border-color:currentColor;opacity:.68}
+.film-frame-rail{position:absolute;right:3.8%;top:50%;z-index:5;display:flex;flex-direction:column;gap:9px;transform:translate(14px,-50%);opacity:0;pointer-events:none;transition:opacity .4s .3s,transform .55s .3s cubic-bezier(.16,1,.3,1)}
+#film[data-view=detail] .film-frame-rail:not([hidden]){opacity:1;transform:translate(0,-50%);pointer-events:auto}
+.film-frame-rail button{position:relative;width:56px;height:72px;padding:3px;border:1px solid color-mix(in srgb,currentColor 22%,transparent);opacity:.42;transition:opacity .25s,border-color .25s,transform .3s;overflow:hidden}
+.film-frame-rail button:hover{opacity:.82;transform:translateX(-3px)}
+.film-frame-rail button[aria-current=true]{opacity:1;border-color:currentColor}
+.film-frame-rail img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(.7);transition:filter .25s}
+.film-frame-rail button[aria-current=true] img,.film-frame-rail button:hover img{filter:none}
+.film-note,.film-gesture{position:absolute;bottom:38px;font-size:9px;line-height:1.3;pointer-events:none;color:var(--ink);opacity:.68}
+.film-note{left:3.8%}.film-gesture{right:3.8%;text-align:right;transition:opacity .4s}
+#film[data-view=detail] .film-gesture{opacity:0}
+#film[data-view=detail] .film-note{opacity:0}
+.film-announcement{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+body[data-mode=film] .foot{position:fixed;bottom:21px;left:50%;transform:translateX(-50%);padding:0;min-height:0;z-index:7}
+body[data-mode=film] .foot>a{position:absolute;left:50%;transform:translateX(-50%);bottom:43px;white-space:nowrap;opacity:.7;pointer-events:auto;font-size:9px}
+body[data-mode=film] .foot>a:focus-visible{opacity:1;pointer-events:auto}
+body[data-mode=film] .mode-switch{padding:3px;gap:0;background:#14141430;border-color:#d5deca21}
+body[data-mode=film] .mode-switch button{padding:7px 12px;font-size:9px}
+body[data-mode=film] .mode-switch button[aria-pressed=true]{background:#dbded01a;color:var(--ink)}
+@media(max-width:700px){
+  body[data-mode=film] .top{height:80px;padding:23px 6%}
+  body[data-mode=film] .brand{width:136px;height:22px}
+  body[data-mode=film] .top nav{font-size:9px;gap:15px}
+  body[data-mode=film] .ruler{top:78px;gap:9px}
+  body[data-mode=film] .ruler button,body[data-mode=film] .ruler button[aria-current=true]{height:12px}
+  .ruler-counter{top:34px}
+  .film-titles{inset:25% 6% auto}
+  #film-title{font-size:clamp(36px,10.5vw,72px);letter-spacing:-.07em;line-height:1.02}
+  .film-detail-controls{top:auto;bottom:22px}
+  .film-metadata{display:none}
+  .film-project-copy{left:6%;bottom:68px;width:62vw}
+  .film-project-kind{font-size:12px;margin-bottom:6px}
+  .film-project-description{font-size:14px;line-height:1.3}
+  .film-project-role{font-size:12px;margin-top:6px}
+  .film-frame-rail{right:6%;top:auto;bottom:70px;flex-direction:row;transform:translateY(10px);gap:6px}
+  #film[data-view=detail] .film-frame-rail:not([hidden]){transform:none}
+  .film-frame-rail button{width:38px;height:50px;padding:2px}
+  .film-frame-rail button:hover{transform:none}
+  .film-note,.film-gesture{bottom:92px;font-size:8px}
+  .film-note{left:6%}.film-gesture{right:6%}
+  body[data-mode=film] .foot{bottom:27px;flex-wrap:nowrap;width:max-content}
+}
+@media(prefers-reduced-motion:reduce){.film-title-letter{will-change:auto}}
+
+/* Production home: the visual index is the first contact, the calm portfolio is one step deeper. */
+.portfolio-home .top{z-index:10}
+.portfolio-home .top nav{display:flex;align-items:center;height:32px;font-size:12px;text-transform:uppercase;letter-spacing:.02em}
+.portfolio-home .top nav a{position:relative;display:inline-flex;align-items:center;height:32px;padding:0;line-height:1}
+.portfolio-home .top nav a:after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:currentColor;transition:right .35s cubic-bezier(.2,.7,.2,1)}
+.portfolio-home .top nav a:hover:after{right:0}
+.portfolio-home .film-titles{inset:15.5% 4.5% auto}
+.portfolio-home #film-title{mix-blend-mode:multiply}
+.portfolio-home .film-detail-controls{top:80%;display:flex;flex-direction:column;align-items:center;gap:9px}
+.portfolio-home .film-detail-controls button{font-size:11px;text-transform:uppercase;letter-spacing:.03em}
+.portfolio-home #film-fit{border-bottom:1px solid color-mix(in srgb,currentColor 45%,transparent)}
+.portfolio-home #film-back{margin:0;opacity:.52}
+.portfolio-home #film-back{border-bottom:1px solid color-mix(in srgb,currentColor 45%,transparent);opacity:.72;padding:8px 2px 5px}
+.portfolio-home #film-back:hover{opacity:1}
+.portfolio-home[data-film-view=detail] .film-card[aria-current=true]{cursor:zoom-out}
+.portfolio-home .film-continue{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);z-index:5;font-size:11px;text-transform:uppercase;letter-spacing:.025em;padding:9px 0;border-bottom:1px solid color-mix(in srgb,currentColor 40%,transparent);transition:opacity .35s,transform .35s}
+.portfolio-home .film-continue span{display:inline-block;margin-left:18px;transition:transform .35s}
+.portfolio-home .film-continue:hover span{transform:translate(4px,4px)}
+.portfolio-home #film[data-view=detail] .film-continue{opacity:0;pointer-events:none;transform:translate(-50%,8px)}
+.portfolio-home .home-socials{position:fixed;right:3.8%;bottom:35px;z-index:8;display:flex;flex-direction:column;align-items:flex-end;font-size:10px;line-height:1.45;text-transform:uppercase}
+.portfolio-home .home-socials a{opacity:.72}
+.portfolio-home .home-socials a:hover{opacity:1}
+.portfolio-home .film-gesture{bottom:86px}
+.portfolio-home[data-film-view=detail]{--line:color-mix(in srgb,var(--film-ink) 26%,transparent);--muted:color-mix(in srgb,var(--film-ink) 62%,transparent)}
+.portfolio-home[data-film-view=detail] .brand{background:var(--film-title)}
+.portfolio-home[data-film-view=detail] .ruler button{background:color-mix(in srgb,var(--film-ink) 22%,transparent)}
+.portfolio-home[data-film-view=detail] .ruler button[aria-current=true]{border-color:var(--film-title)}
+.portfolio-home[data-film-view=detail] .top nav,.portfolio-home[data-film-view=detail] .film-note,.portfolio-home[data-film-view=detail] .home-socials{color:var(--film-title)}
+
+@media(max-width:700px){
+  .portfolio-home .top nav a:first-child{display:none}
+  .portfolio-home .film-titles{inset:22% 5% auto}
+  .portfolio-home #film-title{font-size:clamp(34px,12vw,62px);line-height:.92}
+  .portfolio-home .film-detail-controls{top:auto;bottom:20px;left:6%;transform:none;align-items:flex-start;text-align:left}
+  .portfolio-home #film-back{margin-top:0}
+  .portfolio-home .film-project-copy{bottom:70px}
+  .portfolio-home .film-frame-rail{bottom:72px}
+  .portfolio-home .film-continue{bottom:76px;width:max-content;max-width:76vw;text-align:center}
+  .portfolio-home .home-socials{right:6%;bottom:24px;flex-direction:row;gap:12px}
+  .portfolio-home .film-note{bottom:24px}
+  .portfolio-home .film-gesture{display:none}
+}
+@media(max-height:700px){
+  body[data-mode=film][data-film-view=detail]{height:auto;min-height:820px;overflow-y:auto}
+  body[data-mode=film][data-film-view=detail] #film{height:820px}
+  .portfolio-home[data-film-view=detail] .home-socials{display:none}
+}
