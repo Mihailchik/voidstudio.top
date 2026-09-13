@@ -83,7 +83,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     if (work.kind === 'video') {
       const video = document.createElement('video');
       video.dataset.src = work.src;
-      video.poster = work.poster;
+      video.poster = thumbnailFor(work.poster);
       video.muted = true;
       video.loop = true;
       video.preload = 'metadata';

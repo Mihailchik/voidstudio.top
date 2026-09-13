@@ -70,9 +70,7 @@ body[data-mode=film] .mode-switch button[aria-pressed=true]{background:#dbded01a
   body[data-mode=film] .top{height:80px;padding:23px 6%}
   body[data-mode=film] .brand{width:136px;height:22px}
   body[data-mode=film] .top nav{font-size:9px;gap:15px}
-  body[data-mode=film] .ruler{top:78px;gap:9px}
-  body[data-mode=film] .ruler button,body[data-mode=film] .ruler button[aria-current=true]{height:12px}
-  .ruler-counter{top:34px}
+  body[data-mode=film] .ruler{display:none}
   .film-titles{inset:25% 6% auto}
   #film-title{font-size:clamp(36px,10.5vw,72px);letter-spacing:-.07em;line-height:1.02}
   .film-detail-controls{top:auto;bottom:22px}
