@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>(()=>{const current=document.documentElement.lang==='ru'?'ru':'en';let saved='';try{saved=localStorage.getItem('voidstudio-language')||''}catch{}const browser=(navigator.languages?.[0]||navigator.language||'en').toLowerCase();const wanted=saved||(browser.startsWith('ru')?'ru':'en');const routes={'/':{ru:'/',en:'/en/'},'/index.html':{ru:'/',en:'/en/'},'/studio.html':{ru:'/studio.html',en:'/en/studio.html'},'/projects.html':{ru:'/projects.html',en:'/en/projects.html'},'/en/':{ru:'/',en:'/en/'},'/en/index.html':{ru:'/',en:'/en/'},'/en/studio.html':{ru:'/studio.html',en:'/en/studio.html'},'/en/projects.html':{ru:'/projects.html',en:'/en/projects.html'}};const target=routes[location.pathname]?.[wanted];if(target&&wanted!==current)location.replace(target+location.search+location.hash);addEventListener('DOMContentLoaded',()=>document.querySelectorAll('.nav-language[hreflang]').forEach(link=>link.addEventListener('click',()=>{try{localStorage.setItem('voidstudio-language',link.hreflang)}catch{}})))})();</script>
   <meta name="theme-color" content="#f4f4f0">
   <title>О студии Void Studio — разработка, дизайн и AI-визуал</title>
   <meta name="description" content="Void Studio проектирует и запускает сайты, приложения, автоматизацию, AI-изображения и видео. Подход, услуги, проекты и контакты студии.">
@@ -27,7 +28,7 @@
   <meta name="twitter:image" content="https://voidstudio.top/assets/img/og.png">
   <link rel="icon" href="assets/img/favicon-64.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <link rel="stylesheet" href="assets/site.css?v=4">
+  <link rel="stylesheet" href="assets/site.css?v=5">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -44,7 +45,7 @@
   <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body><header class="site-header"><a class="site-logo" href="index.html" aria-label="Void Studio — визуальные работы"></a><nav aria-label="Основная навигация"><a href="index.html">Работы</a><a href="projects.html">Проекты</a><a href="#about">О студии</a><a class="nav-language" href="en/studio.html" lang="en" hreflang="en">EN</a><a class="nav-contact" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Написать ↗</a></nav></header>
+<body><header class="site-header"><a class="site-logo" href="index.html" aria-label="Void Studio — визуальные работы"></a><nav aria-label="Основная навигация"><a href="index.html">Работы</a><a href="projects.html">Проекты</a><a href="#about">О студии</a><a class="nav-language" href="en/studio.html" lang="en" hreflang="en" aria-label="Переключить на английский">EN</a><a class="nav-contact" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Написать ↗</a></nav></header>
 <main>
   <section class="hero"><div class="hero-copy"><p class="kicker">Void Studio</p><h1>Делаем сайты, приложения и визуальные работы.</h1><p class="hero-lead">Проектируем, программируем и запускаем. Здесь — наши продукты, изображения и видео.</p><div class="hero-actions"><a class="button primary" href="projects.html">Смотреть проекты ↗</a><a class="button" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Обсудить задачу</a></div></div>
   <div class="hero-images" aria-label="Избранные работы Void Studio"><figure class="hero-main"><img src="assets/gallery/railway-quarter.webp" alt="Квартал у рельсов" width="1594" height="2400" fetchpriority="high"><figcaption>Квартал у рельсов</figcaption></figure><figure class="hero-small one"><img src="assets/gallery/light-and-shadow.webp" alt="Свет и тени" width="1080" height="1350" decoding="async"></figure><figure class="hero-small two"><img src="assets/gallery/edge-crab.webp" alt="У кромки воды" width="810" height="1440" decoding="async"></figure></div></section>
