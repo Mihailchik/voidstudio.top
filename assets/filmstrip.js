@@ -1,5 +1,13 @@
 // Void Studio's continuous index → expanded ribbon.
 function createFilmstrip(works, { reduced = false } = {}) {
+  const english = document.documentElement.lang.startsWith('en');
+  const copy = english ? {
+    frames: 'Project frames', view: 'View', select: 'Select', frame: 'Frame', of: 'of',
+    showFrame: 'Show frame', publication: 'View publication', examine: 'Examine', restore: 'Restore crop'
+  } : {
+    frames: 'Кадры проекта', view: 'Рассмотреть', select: 'Выбрать', frame: 'Кадр', of: 'из',
+    showFrame: 'Показать кадр', publication: 'Смотреть публикацию', examine: 'Рассмотреть', restore: 'Вернуть кадр'
+  };
   const stage = document.getElementById('film-stage');
   const section = document.getElementById('film');
   const track = document.getElementById('film-track');
@@ -17,7 +25,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
   const projectLink = projectCopy.querySelector('.film-project-link');
   const frameRail = document.createElement('div');
   frameRail.className = 'film-frame-rail';
-  frameRail.setAttribute('aria-label', 'Кадры проекта');
+  frameRail.setAttribute('aria-label', copy.frames);
   frameRail.hidden = true;
   frameRail.inert = true;
   projectCopy.setAttribute('aria-hidden', 'true');
@@ -43,7 +51,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     const card = document.createElement('button');
     card.type = 'button';
     card.className = 'film-card';
-    card.setAttribute('aria-label', `Рассмотреть: ${work.title}`);
+    card.setAttribute('aria-label', `${copy.view}: ${work.title}`);
     const image = new Image();
     image.alt = work.title;
     image.draggable = false;
@@ -78,7 +86,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     frameIndexes[index] = 0;
     const tick = document.createElement('button');
     tick.type = 'button';
-    tick.setAttribute('aria-label', `Выбрать: ${work.title}`);
+    tick.setAttribute('aria-label', `${copy.select}: ${work.title}`);
     tick.addEventListener('click', () => goTo(index));
     ruler.append(tick);
     ticks.push(tick);
@@ -126,7 +134,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     frameRail.querySelectorAll('button').forEach((button, index) => {
       button.setAttribute('aria-current', String(index === frameIndex));
     });
-    document.getElementById('film-announcement').textContent = `${works[workIndex].title}. Кадр ${frameIndex + 1} из ${frames.length}: ${frame.label}.`;
+    document.getElementById('film-announcement').textContent = `${works[workIndex].title}. ${copy.frame} ${frameIndex + 1} ${copy.of} ${frames.length}: ${frame.label}.`;
     wake();
   }
 
@@ -135,12 +143,12 @@ function createFilmstrip(works, { reduced = false } = {}) {
     const frames = framesFor(work);
     frameRail.replaceChildren();
     frameRail.hidden = frames.length < 2;
-    frameRail.setAttribute('aria-label', `Кадры проекта «${work.title}»`);
+    frameRail.setAttribute('aria-label', `${copy.frames}: ${work.title}`);
     if (frames.length < 2) return;
     frames.forEach((frame, index) => {
       const button = document.createElement('button');
       button.type = 'button';
-      button.setAttribute('aria-label', `Показать кадр: ${frame.label}`);
+      button.setAttribute('aria-label', `${copy.showFrame}: ${frame.label}`);
       button.setAttribute('aria-current', String(index === frameIndexes[workIndex]));
       const preview = new Image();
       preview.src = frame.src;
@@ -165,7 +173,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     projectDescription.textContent = work.description || '';
     projectRole.textContent = work.role || '';
     projectLink.href = work.url || '#';
-    projectLink.textContent = work.urlLabel ? `${work.urlLabel} ↗` : 'Смотреть публикацию ↗';
+    projectLink.textContent = work.urlLabel ? `${work.urlLabel} ↗` : `${copy.publication} ↗`;
     projectLink.hidden = !work.url;
     projectCopy.hidden = !work.description && !work.role && !work.url;
     renderFrameRail(index);
@@ -208,7 +216,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
       document.body.style.setProperty('--film-background', work.detailBackground || '#eeece6');
       document.body.style.setProperty('--film-ink', work.detailInk || '#252622');
       document.body.style.setProperty('--film-title', work.accent || work.color || '#7d5137');
-      document.getElementById('film-announcement').textContent = `${work.title}. ${index + 1} из ${works.length}.`;
+      document.getElementById('film-announcement').textContent = `${work.title}. ${index + 1} ${copy.of} ${works.length}.`;
     }
     syncVideoPlayback(index);
   }
@@ -252,7 +260,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     section.dataset.fit = 'crop';
     if (fitButton) {
       fitButton.setAttribute('aria-pressed', 'false');
-      fitButton.innerHTML = 'Рассмотреть <span>+</span>';
+      fitButton.innerHTML = `${copy.examine} <span>+</span>`;
     }
   }
   function toggleFit() {
@@ -260,7 +268,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     fitGoal = fitGoal ? 0 : 1;
     section.dataset.fit = fitGoal ? 'full' : 'crop';
     fitButton.setAttribute('aria-pressed', String(Boolean(fitGoal)));
-    fitButton.innerHTML = fitGoal ? 'Вернуть кадр <span>−</span>' : 'Рассмотреть <span>+</span>';
+    fitButton.innerHTML = fitGoal ? `${copy.restore} <span>−</span>` : `${copy.examine} <span>+</span>`;
     wake();
   }
 

@@ -8,6 +8,9 @@
   <meta name="description" content="Void Studio создаёт AI-изображения и видео, сайты, приложения, интерактивные проекты, ботов и автоматизацию. Портфолио и контакты студии.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
   <link rel="canonical" href="https://voidstudio.top/">
+  <link rel="alternate" hreflang="ru" href="https://voidstudio.top/">
+  <link rel="alternate" hreflang="en" href="https://voidstudio.top/en/">
+  <link rel="alternate" hreflang="x-default" href="https://voidstudio.top/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
   <meta property="og:site_name" content="Void Studio">
@@ -62,6 +65,8 @@
     ]
   }
   </script>
+  <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body data-mode="film" class="portfolio-home">
   <header class="top">
@@ -70,6 +75,7 @@
     <nav aria-label="Основная навигация">
       <a href="studio.html#about">О студии</a>
       <a href="projects.html">Проекты ↗</a>
+      <a class="nav-language" href="en/" lang="en" hreflang="en">EN</a>
     </nav>
   </header>
 
@@ -100,7 +106,7 @@
 
   <dialog id="viewer"></dialog>
   <script src="assets/gallery-data.js?v=8"></script>
-  <script src="assets/filmstrip.js?v=7"></script>
+  <script src="assets/filmstrip.js?v=8"></script>
   <script>
     const ids = selectedGalleryIds();
     const works = (ids.length ? ids : suggestedGalleryIds)

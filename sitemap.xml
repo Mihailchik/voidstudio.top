@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://voidstudio.top/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/" />
   </url>
   <url>
     <loc>https://voidstudio.top/studio.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/studio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/studio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/studio.html" />
   </url>
   <url>
     <loc>https://voidstudio.top/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/studio.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/studio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/studio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/studio.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects.html" />
   </url>
 </urlset>
