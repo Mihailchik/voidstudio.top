@@ -47,6 +47,27 @@ function createFilmstrip(works, { reduced = false } = {}) {
   const cards = [], ticks = [], images = [], videos = [], frameIndexes = [];
   const renderer = createRibbonRenderer(document.getElementById('film-canvas'));
 
+  function thumbnailFor(source) {
+    return source.replace(/\/([^/.]+)\.[^/.]+$/, '/thumbs/$1.webp');
+  }
+
+  function loadFull(index) {
+    const image = images[index];
+    if (!image || image.dataset.fullRequested === 'true') return;
+    image.dataset.fullRequested = 'true';
+    const requestedFrame = frameIndexes[index];
+    const fullImage = new Image();
+    fullImage.alt = works[index].title;
+    fullImage.onload = () => {
+      if (frameIndexes[index] !== requestedFrame) return;
+      image.src = image.dataset.fullSrc;
+      image.dataset.fullLoaded = 'true';
+      renderer?.upload(index, fullImage);
+      wake();
+    };
+    fullImage.src = image.dataset.fullSrc;
+  }
+
   works.forEach((work, index) => {
     const card = document.createElement('button');
     card.type = 'button';
@@ -56,7 +77,8 @@ function createFilmstrip(works, { reduced = false } = {}) {
     image.alt = work.title;
     image.draggable = false;
     image.onload = () => { renderer?.upload(index, image); wake(); };
-    image.src = work.poster || work.src;
+    image.dataset.fullSrc = work.poster || work.src;
+    image.src = thumbnailFor(image.dataset.fullSrc);
     card.append(image);
     if (work.kind === 'video') {
       const video = document.createElement('video');
@@ -72,14 +94,19 @@ function createFilmstrip(works, { reduced = false } = {}) {
     }
     card.addEventListener('click', event => {
       if (suppressClick && event.detail !== 0) return;
+      loadFull(index);
       if (!expandTo) open(index);
       else if (index !== Math.round(target)) goTo(index);
       else close();
     });
     // Keyboard focus scrolls an offscreen thumbnail into the viewport.
     card.addEventListener('focus', () => {
-      if (card.matches(':focus-visible')) goTo(index);
+      if (card.matches(':focus-visible')) {
+        loadFull(index);
+        goTo(index);
+      }
     });
+    card.addEventListener('pointerenter', () => loadFull(index), { once: true });
     track.append(card);
     cards.push(card);
     images.push(image);
