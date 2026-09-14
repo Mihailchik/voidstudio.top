@@ -3,3 +3,23 @@
 @media(max-width:420px){.project-row{grid-template-columns:1fr!important;gap:12px!important;padding:34px 0!important}.project-row h2,.project-description,.project-links{grid-column:1!important}.project-row .index{margin-bottom:3px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 .nav-language{font:inherit;letter-spacing:inherit}
+
+/* Отклик у всего, что кликается. Анимируем только цвет, прозрачность и сдвиг —
+   размеры не трогаем, чтобы страница не дёргалась. Наведение — только там, где
+   оно есть физически: на телефоне после тапа оно бы залипало. Нажатие — везде. */
+.nav-contact,.media-link,.button,.contact-button,.contact-button span{transition:transform .2s,opacity .2s,background-color .2s,color .2s,border-color .2s}
+.section-head>a,.about-text a,.project-links a,.projects-contact a,footer a,.site-logo{transition:opacity .2s}
+@media(hover:hover){
+  .site-logo:hover{opacity:.65}
+  .nav-contact:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)!important}
+  .button.primary:hover{background:var(--accent);border-color:var(--accent)}
+  .button:not(.primary):not(.light):hover{border-color:var(--ink)}
+  .button.light:hover{border-color:#eef0ea}
+  .media-link:hover{background:var(--ink);color:var(--paper);transform:translateY(-2px)}
+  .surf-card .media-link:hover{background:#fff;color:#0d3444}
+  .contact-button:hover{border-color:var(--ink)}
+  .contact-button:hover span{transform:translate(5px,-5px)}
+  .section-head>a:hover,.about-text a:hover,.project-links a:hover,.projects-contact a:hover,footer a:hover{opacity:.55}
+}
+.button:active,.media-link:active,.nav-contact:active{transform:scale(.97)}
+.contact-button:active,.section-head>a:active,.about-text a:active,.project-links a:active,.projects-contact a:active,footer a:active,.site-logo:active{opacity:.4}
