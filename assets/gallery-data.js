@@ -41,7 +41,7 @@ const galleryWorks = [
   {id:209,src:'assets/gallery/offline-forever.webp',title:'Право отключиться',category:'Технологический постер',description:'Кампания о праве быть офлайн: связь здесь — не преимущество, а след, от которого отказались.',role:'Авторский концепт · идея, арт-дирекшн, генерация · 2025',color:'#c5261c',detailBackground:'#e2e4df',detailInk:'#191b18',accent:'#df1714'},
   {id:210,src:'assets/gallery/green-ritual-powder.webp',title:'Зелёный ритуал',category:'Предметная серия',description:'Два состояния матча: сухой порошок и горячий напиток. Фактура передаёт тишину и ритуал.',role:'Авторский концепт · идея, арт-дирекшн, генерация · 2025',frames:[{src:'assets/gallery/green-ritual-powder.webp',label:'Материал'},{src:'assets/gallery/green-ritual-tea.webp',label:'Ритуал'}],color:'#557421',detailBackground:'#dedac8',detailInk:'#1e2815',accent:'#4f7921'}
 ];
-const suggestedGalleryIds = [63,201,102,205,38,204,37,206,29,104,101,210,207,203,208,1,111,103,202,32,209,107,108,110,109,105,106];
+const suggestedGalleryIds = [63,201,205,38,204,37,206,29,104,101,210,207,203,208,1,111,103,202,32,209,107,108,110,109,105,106];
 function selectedGalleryIds() {
   const raw = new URL(location.href).searchParams.get('works');
   if (raw === null) return [...suggestedGalleryIds];

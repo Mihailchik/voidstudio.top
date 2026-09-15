@@ -261,9 +261,9 @@ function createFilmstrip(works, { reduced = false } = {}) {
     resetFit();
     if (!value) {
       syncVideoPlayback(-1);
-      document.body.style.setProperty('--film-background', '#141414');
-      document.body.style.setProperty('--film-ink', '#e4e5da');
-      document.body.style.setProperty('--film-title', '#e4e5da');
+      document.body.style.setProperty('--film-background', '#efeee8');
+      document.body.style.setProperty('--film-ink', '#1c1d1a');
+      document.body.style.setProperty('--film-title', '#1c1d1a');
       stage.focus({ preventScroll: true });
     }
     wake();
@@ -479,7 +479,7 @@ function createRibbonRenderer(canvas) {
       vec4 color = texture2D(uImage, uv);
       float gray = dot(color.rgb, vec3(.299, .587, .114));
       color.rgb = mix(vec3(gray), color.rgb, mix(uHighlight * .9, 1., uExpansion));
-      color.rgb *= mix(.48 + uHighlight * .35, 1., uExpansion);
+      color.rgb = mix(vec3(.937, .933, .91), color.rgb, mix(.42 + uHighlight * .58, 1., uExpansion));
       color.a *= mix(1., .25 + .75 * uSelected, uExpansion);
       gl_FragColor = color;
     }`;

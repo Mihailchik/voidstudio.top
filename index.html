@@ -6,7 +6,7 @@
   <script>(()=>{const current=document.documentElement.lang==='ru'?'ru':'en';let saved='';try{saved=localStorage.getItem('voidstudio-language')||''}catch{}const browser=(navigator.languages?.[0]||navigator.language||'en').toLowerCase();const wanted=saved||(browser.startsWith('ru')?'ru':'en');const routes={'/':{ru:'/',en:'/en/'},'/index.html':{ru:'/',en:'/en/'},'/studio.html':{ru:'/studio.html',en:'/en/studio.html'},'/projects.html':{ru:'/projects.html',en:'/en/projects.html'},'/en/':{ru:'/',en:'/en/'},'/en/index.html':{ru:'/',en:'/en/'},'/en/studio.html':{ru:'/studio.html',en:'/en/studio.html'},'/en/projects.html':{ru:'/projects.html',en:'/en/projects.html'}};const target=routes[location.pathname]?.[wanted];if(target&&wanted!==current){location.replace(target+location.search+location.hash);return}addEventListener('DOMContentLoaded',()=>document.querySelectorAll('.nav-language[hreflang]').forEach(link=>link.addEventListener('click',()=>{try{localStorage.setItem('voidstudio-language',link.hreflang)}catch{}})))})();</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9G3NGMQ6F"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-E9G3NGMQ6F');</script>
-  <meta name="theme-color" content="#111210">
+  <meta name="theme-color" content="#efeee8">
   <title>Void Studio — AI-визуал, сайты и цифровые продукты</title>
   <meta name="description" content="Void Studio создаёт AI-изображения и видео, сайты, приложения, интерактивные проекты, ботов и автоматизацию. Портфолио и контакты студии.">
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
@@ -31,7 +31,7 @@
   <link rel="icon" href="assets/img/favicon-64.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="stylesheet" href="assets/exploration.css?v=2">
-  <link rel="stylesheet" href="assets/filmstrip.css?v=14">
+  <link rel="stylesheet" href="assets/filmstrip.css?v=15">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -108,8 +108,8 @@
   </div>
 
   <dialog id="viewer"></dialog>
-  <script src="assets/gallery-data.js?v=9"></script>
-  <script src="assets/filmstrip.js?v=10"></script>
+  <script src="assets/gallery-data.js?v=10"></script>
+  <script src="assets/filmstrip.js?v=11"></script>
   <script>
     const ids = selectedGalleryIds();
     const works = (ids.length ? ids : suggestedGalleryIds)

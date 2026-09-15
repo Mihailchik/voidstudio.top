@@ -1,5 +1,5 @@
 /* One ribbon, two scales. Shared image planes stay in the same scene. */
-body[data-mode=film]{--bg:#141414;--film-ink:#e4e5da;--film-title:#e4e5da;--ink:var(--film-ink);--line:#41433d;--muted:#93968b;background:var(--film-background,#141414);color:var(--film-ink);height:100svh;overflow:hidden;transition:background 1.05s cubic-bezier(.2,.65,.2,1),color .75s cubic-bezier(.2,.65,.2,1)}
+body[data-mode=film]{--bg:#efeee8;--film-ink:#1c1d1a;--film-title:#1c1d1a;--ink:var(--film-ink);--line:#cfcfc6;--muted:#6f7169;background:var(--film-background,#efeee8);color:var(--film-ink);height:100svh;overflow:hidden;transition:background 1.05s cubic-bezier(.2,.65,.2,1),color .75s cubic-bezier(.2,.65,.2,1)}
 body[data-mode=film] .top{position:fixed;inset:0 0 auto;height:104px;padding:30px 3.8%;pointer-events:none;z-index:6}
 body[data-mode=film] .top a,body[data-mode=film] .ruler{pointer-events:auto}
 body[data-mode=film] .brand{width:173px;height:27px}
@@ -18,9 +18,9 @@ body[data-mode=film] .film-stage.dragging{cursor:grabbing}
 #film-canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 body[data-mode=film] .film-track{position:absolute;inset:0;display:block;transform:none;pointer-events:none}
 body[data-mode=film] .film-card{position:absolute;left:0;top:0;margin:0;width:48px;height:178px;pointer-events:auto;transform-origin:center;overflow:hidden;will-change:transform,width,height;outline-offset:5px!important}
-body[data-mode=film] .film-card img,body[data-mode=film] .film-card video{position:absolute;inset:0;width:100%;height:100%;object-position:center;pointer-events:none;filter:grayscale(1) brightness(.45);transition:filter .4s,opacity .45s}
+body[data-mode=film] .film-card img,body[data-mode=film] .film-card video{position:absolute;inset:0;width:100%;height:100%;object-position:center;pointer-events:none;filter:grayscale(1) brightness(1.18) contrast(.72);transition:filter .4s,opacity .45s}
 body[data-mode=film] .film-card video{opacity:0}
-body[data-mode=film] .film-card:hover img,body[data-mode=film] .film-card:hover video{filter:grayscale(0) brightness(.85)}
+body[data-mode=film] .film-card:hover img,body[data-mode=film] .film-card:hover video{filter:none}
 body[data-mode=film] .film-stage.has-webgl .film-card img{visibility:hidden}
 body[data-mode=film][data-film-view=detail] .film-card[aria-current=true] video{opacity:1}
 body[data-mode=film] .film-card:focus-visible{outline:1px solid var(--ink)}
