@@ -3,10 +3,12 @@ function createFilmstrip(works, { reduced = false } = {}) {
   const english = document.documentElement.lang.startsWith('en');
   const copy = english ? {
     frames: 'Project frames', view: 'View', select: 'Select', frame: 'Frame', of: 'of',
-    showFrame: 'Show frame', publication: 'View publication', examine: 'Examine', restore: 'Restore crop'
+    showFrame: 'Show frame', publication: 'View publication', examine: 'Examine', restore: 'Restore crop',
+    soundOn: 'Sound on', soundOff: 'Sound off'
   } : {
     frames: 'Кадры проекта', view: 'Рассмотреть', select: 'Выбрать', frame: 'Кадр', of: 'из',
-    showFrame: 'Показать кадр', publication: 'Смотреть публикацию', examine: 'Рассмотреть', restore: 'Вернуть кадр'
+    showFrame: 'Показать кадр', publication: 'Смотреть публикацию', examine: 'Рассмотреть', restore: 'Вернуть кадр',
+    soundOn: 'Включить звук', soundOff: 'Выключить звук'
   };
   const stage = document.getElementById('film-stage');
   const section = document.getElementById('film');
@@ -34,7 +36,12 @@ function createFilmstrip(works, { reduced = false } = {}) {
   counter.className = 'ruler-counter';
   const metadata = document.createElement('p');
   metadata.className = 'film-metadata';
-  controls.prepend(metadata);
+  const soundButton = document.createElement('button');
+  soundButton.id = 'film-sound';
+  soundButton.type = 'button';
+  soundButton.hidden = true;
+  soundButton.setAttribute('aria-pressed', 'false');
+  controls.prepend(metadata, soundButton);
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
   const lerp = (a, b, t) => a + (b - a) * t;
   const smooth = t => t < .5 ? 16 * t ** 5 : 1 - (-2 * t + 2) ** 5 / 2;
@@ -129,8 +136,24 @@ function createFilmstrip(works, { reduced = false } = {}) {
         video.play().catch(() => {});
       } else {
         video.pause();
+        video.muted = true;
       }
     });
+  }
+
+  function syncSoundControl(index = -1) {
+    const work = works[index];
+    const video = videos[index];
+    const available = Boolean(work?.hasAudio && video && expandTo);
+    soundButton.hidden = !available;
+    if (!available) {
+      soundButton.setAttribute('aria-pressed', 'false');
+      soundButton.textContent = copy.soundOn;
+      return;
+    }
+    const enabled = !video.muted;
+    soundButton.setAttribute('aria-pressed', String(enabled));
+    soundButton.textContent = enabled ? copy.soundOff : copy.soundOn;
   }
 
   function dimensions() {
@@ -246,6 +269,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
       document.getElementById('film-announcement').textContent = `${work.title}. ${index + 1} ${copy.of} ${works.length}.`;
     }
     syncVideoPlayback(index);
+    syncSoundControl(index);
   }
 
   function changeScale(value) {
@@ -261,6 +285,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     resetFit();
     if (!value) {
       syncVideoPlayback(-1);
+      syncSoundControl(-1);
       document.body.style.setProperty('--film-background', '#efeee8');
       document.body.style.setProperty('--film-ink', '#1c1d1a');
       document.body.style.setProperty('--film-title', '#1c1d1a');
@@ -298,6 +323,18 @@ function createFilmstrip(works, { reduced = false } = {}) {
     fitButton.innerHTML = fitGoal ? `${copy.restore} <span>−</span>` : `${copy.examine} <span>+</span>`;
     wake();
   }
+
+  soundButton.addEventListener('click', event => {
+    event.stopPropagation();
+    const index = clamp(Math.round(target), 0, works.length - 1);
+    const video = videos[index];
+    if (!video || !works[index]?.hasAudio) return;
+    if (!video.src) video.src = video.dataset.src;
+    video.muted = !video.muted;
+    video.volume = 1;
+    if (!video.muted) video.play().catch(() => { video.muted = true; });
+    syncSoundControl(index);
+  });
 
   function render(time) {
     frame = 0;

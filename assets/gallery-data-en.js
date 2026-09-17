@@ -26,7 +26,9 @@ const galleryEnglishCopy = {
   207: {title:'Held Breath',category:'Graphic · Study',description:'A single contour in place of a finished portrait: one gesture and a brief pause.',role:'Original concept · graphic, generation · 2025'},
   208: {title:'The Painting Looks Back',category:'Illustration series',description:'A concept for an art school in which the character stops being a drawing and answers its creator.',role:'Original concept · idea, art direction, generation · 2025',frames:[{src:'../assets/gallery/first-viewer.webp',label:'The first viewer'},{src:'../assets/gallery/painting-looks-back.webp',label:'A conversation with the painting'}]},
   209: {title:'The Right to Disconnect',category:'Technology poster',description:'A campaign for the right to be offline. Connection becomes a trace someone has chosen to leave behind.',role:'Original concept · idea, art direction, generation · 2025'},
-  210: {title:'Green Ritual',category:'Still-life series',description:'Two states of matcha: dry powder and a hot drink. Texture carries the quiet rhythm of the ritual.',role:'Original concept · idea, art direction, generation · 2025',frames:[{src:'../assets/gallery/green-ritual-powder.webp',label:'Material'},{src:'../assets/gallery/green-ritual-tea.webp',label:'Ritual'}]}
+  210: {title:'Green Ritual',category:'Still-life series',description:'Two states of matcha: dry powder and a hot drink. Texture carries the quiet rhythm of the ritual.',role:'Original concept · idea, art direction, generation · 2025',frames:[{src:'../assets/gallery/green-ritual-powder.webp',label:'Material'},{src:'../assets/gallery/green-ritual-tea.webp',label:'Ritual'}]},
+  211: {title:'Signal from the Void',category:'Identity · Video',description:'A living Void Studio mark: the cat catches a signal that usually stays outside the frame.',role:'Brand animation · generation, edit and music · 2026'},
+  212: {title:'Cat with an Earbud',category:'Identity · Hand-drawn video',description:'A hand-drawn cat with an earbud, brought to life in a short loop of shifting gaze.',role:'Hand-drawn video · 2026'}
 };
 
 galleryWorks.forEach(work => {
