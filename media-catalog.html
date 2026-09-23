@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Отбор материалов — Void Studio</title>
+  <link rel="icon" href="assets/img/favicon-64.png">
+  <link rel="stylesheet" href="assets/media-catalog.css">
+</head>
+<body>
+  <header class="catalog-head">
+    <div>
+      <p class="eyebrow">VOID STUDIO / ЛОКАЛЬНЫЙ АРХИВ</p>
+      <h1>Что ставим<br>на сайт?</h1>
+    </div>
+    <div class="summary">
+      <p><strong>67</strong> материалов</p>
+      <p>33 изображения · 34 видео</p>
+      <p>Отметки сохраняются в этом браузере.</p>
+    </div>
+  </header>
+
+  <div class="catalog-tools">
+    <div class="filters" aria-label="Фильтр материалов">
+      <button type="button" data-filter="all" aria-pressed="true">Все <span>67</span></button>
+      <button type="button" data-filter="image" aria-pressed="false">Изображения <span>33</span></button>
+      <button type="button" data-filter="video" aria-pressed="false">Видео <span>34</span></button>
+      <button type="button" data-filter="selected" aria-pressed="false">Выбрано <span id="selected-filter-count">4</span></button>
+    </div>
+    <label class="search"><span>Поиск</span><input id="catalog-search" type="search" placeholder="Название или ID" autocomplete="off"></label>
+  </div>
+
+  <main id="catalog-grid" class="catalog-grid" aria-live="polite"></main>
+
+  <div class="selection-bar">
+    <p><span id="selected-count">4</span> выбрано</p>
+    <button id="copy-selection" type="button">Скопировать список</button>
+  </div>
+
+  <template id="media-card-template">
+    <article class="media-card">
+      <div class="media-preview"></div>
+      <div class="media-copy">
+        <p class="media-meta"></p>
+        <h2></h2>
+        <label class="select-control"><input type="checkbox"><span>Добавить на сайт</span></label>
+      </div>
+    </article>
+  </template>
+
+  <script src="assets/media-catalog-data.js"></script>
+  <script src="assets/media-catalog.js"></script>
+</body>
+</html>

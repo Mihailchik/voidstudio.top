@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Работы — Void Studio</title>
+  <meta name="description" content="Избранные визуальные работы Void Studio.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://voidstudio.top/">
+  <link rel="icon" href="assets/img/favicon-64.png">
+  <link rel="stylesheet" href="assets/exploration.css?v=2">
+  <link rel="stylesheet" href="assets/filmstrip.css?v=13">
+  <style>
+    body[data-mode=film] .foot{display:none}
+    .film-note{bottom:38px}
+    .works-back{position:fixed;left:3.8%;bottom:36px;z-index:8;font-size:11px;opacity:.7}
+    .film-gesture{bottom:36px}
+    @media(max-width:700px){
+      .works-back{left:6%;bottom:30px}
+      .film-note{display:none}
+      .film-gesture{bottom:30px}
+    }
+  </style>
+</head>
+<body data-mode="film">
+  <header class="top">
+    <a class="brand" href="index.html" aria-label="Void Studio — главная"></a>
+    <div class="ruler" id="ruler" aria-label="Выбрать работу"></div>
+    <nav>
+      <a href="studio.html#about">О студии</a>
+      <a href="projects.html">Проекты ↗</a>
+    </nav>
+  </header>
+  <main>
+    <section id="film" aria-label="Работы Void Studio" data-view="index">
+      <div class="film-stage" id="film-stage" tabindex="0" aria-label="Тяните ленту или прокручивайте колесо. Нажмите на изображение, чтобы раскрыть его.">
+        <canvas id="film-canvas" aria-hidden="true"></canvas>
+        <div class="film-track" id="film-track"></div>
+      </div>
+      <div class="film-titles" aria-hidden="true"><h2 id="film-title"></h2></div>
+      <p class="film-announcement" id="film-announcement" aria-live="polite"></p>
+      <div class="film-detail-controls" inert>
+        <button id="film-fit" type="button" aria-pressed="false">Показать целиком <span>↗</span></button>
+        <button id="film-back" type="button">← К ленте</button>
+      </div>
+      <p class="film-note">VOID STUDIO . LAB<br>Избранные работы</p>
+      <p class="film-gesture">Тяни, чтобы листать<br>Нажми, чтобы раскрыть</p>
+    </section>
+  </main>
+  <a class="works-back" href="index.html">← Главная</a>
+  <dialog id="viewer"></dialog>
+  <script src="assets/gallery-data.js?v=8"></script>
+  <script src="assets/filmstrip.js?v=7"></script>
+  <script>
+    const ids = selectedGalleryIds();
+    const works = (ids.length ? ids : suggestedGalleryIds)
+      .map(id => galleryWorks.find(work => work.id === id))
+      .filter(Boolean);
+    const filmController = createFilmstrip(works, {
+      reduced: matchMedia('(prefers-reduced-motion: reduce)').matches
+    });
+    filmController.setActive(true);
+  </script>
+</body>
+</html>

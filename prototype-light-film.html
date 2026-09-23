@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  
+  <meta name="theme-color" content="#efeee8">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Void Studio — AI-визуал, сайты и цифровые продукты</title>
+  <meta name="description" content="Void Studio создаёт AI-изображения и видео, сайты, приложения, интерактивные проекты, ботов и автоматизацию. Портфолио и контакты студии.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://voidstudio.top/">
+  <link rel="alternate" hreflang="ru" href="https://voidstudio.top/">
+  <link rel="alternate" hreflang="en" href="https://voidstudio.top/en/">
+  <link rel="alternate" hreflang="x-default" href="https://voidstudio.top/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Void Studio">
+  <meta property="og:title" content="Void Studio — AI-визуал, сайты и цифровые продукты">
+  <meta property="og:description" content="AI-изображения и видео, сайты, приложения, интерактивные проекты и автоматизация.">
+  <meta property="og:url" content="https://voidstudio.top/">
+  <meta property="og:image" content="https://voidstudio.top/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Логотип Void Studio . Lab">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Void Studio — AI-визуал, сайты и цифровые продукты">
+  <meta name="twitter:description" content="AI-изображения и видео, сайты, приложения, интерактивные проекты и автоматизация.">
+  <meta name="twitter:image" content="https://voidstudio.top/assets/img/og.png">
+  <link rel="icon" href="assets/img/favicon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="stylesheet" href="assets/exploration.css?v=2">
+  <link rel="stylesheet" href="assets/filmstrip.css?v=14">
+  <link rel="stylesheet" href="assets/prototype-light-film.css?b=1">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://voidstudio.top/#organization",
+        "name": "Void Studio",
+        "alternateName": "Void Studio . Lab",
+        "url": "https://voidstudio.top/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://voidstudio.top/assets/img/logo-cat.png",
+          "width": 608,
+          "height": 608
+        },
+        "image": "https://voidstudio.top/assets/img/og.png",
+        "description": "Независимая студия AI-визуала, сайтов, приложений, интерактивных проектов и автоматизации.",
+        "sameAs": [
+          "https://t.me/voidstudio_lab",
+          "https://www.youtube.com/@voidstudiolab",
+          "https://github.com/Mihailchik",
+          "https://www.instagram.com/voidstudio.lab/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://voidstudio.top/#website",
+        "url": "https://voidstudio.top/",
+        "name": "Void Studio",
+        "inLanguage": "ru-RU",
+        "publisher": {"@id": "https://voidstudio.top/#organization"}
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-mode="film" class="portfolio-home">
+  <header class="top">
+    <a class="brand" href="index.html" aria-label="Void Studio — к ленте"></a>
+    <div class="ruler" id="ruler" aria-label="Выбрать работу"></div>
+    <nav aria-label="Основная навигация">
+      <a href="studio.html#about">О студии</a>
+      <a href="projects.html">Проекты ↗</a>
+      <a class="nav-language" href="en/" lang="en" hreflang="en" aria-label="Переключить на английский">EN</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="film" aria-label="Избранные работы Void Studio" data-view="index">
+      <div class="film-stage" id="film-stage" tabindex="0" aria-label="Прокручивайте колесо или тяните ленту. Нажмите на изображение, чтобы раскрыть работу.">
+        <canvas id="film-canvas" aria-hidden="true"></canvas>
+        <div class="film-track" id="film-track"></div>
+      </div>
+
+      <div class="film-titles" aria-hidden="true"><h2 id="film-title"></h2></div>
+      <p class="film-announcement" id="film-announcement" aria-live="polite"></p>
+
+      <div class="film-detail-controls" inert>
+        <button id="film-back" type="button">← К ленте</button>
+      </div>
+
+      <h1 class="film-note">VOID STUDIO . LAB<br>AI-визуал и цифровые проекты</h1>
+      <p class="film-gesture">Колесо / тянуть — листать<br>Нажать — раскрыть</p>
+      <a class="film-continue" href="studio.html">Студия и проекты <span>↘</span></a>
+    </section>
+  </main>
+
+  <div class="home-socials" aria-label="Социальные сети">
+    <a href="https://www.instagram.com/voidstudio.lab/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://t.me/voidstudio_lab" target="_blank" rel="noopener">Telegram</a>
+  </div>
+
+  <dialog id="viewer"></dialog>
+  <script src="assets/gallery-data.js?v=9"></script>
+  <script src="assets/prototype-light-film.js?b=1"></script>
+  <script>
+    const ids = selectedGalleryIds();
+    const works = (ids.length ? ids : suggestedGalleryIds)
+      .map(id => galleryWorks.find(work => work.id === id))
+      .filter(Boolean);
+    const filmController = createFilmstrip(works, {
+      reduced: matchMedia('(prefers-reduced-motion: reduce)').matches
+    });
+    filmController.setActive(true);
+  </script>
+</body>
+</html>

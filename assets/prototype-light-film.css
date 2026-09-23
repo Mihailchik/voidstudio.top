@@ -1,0 +1,5 @@
+/* ПРОТОТИП светлой ленты: перекрываем только тёмные значения filmstrip.css. */
+body[data-mode=film]{--bg:#efeee8;--film-ink:#1c1d1a;--film-title:#1c1d1a;--line:#cfcfc6;--muted:#6f7169;background:var(--film-background,#efeee8)}
+/* Запасной DOM-режим без WebGL: те же два варианта. */
+body[data-mode=film] .film-card img,body[data-mode=film] .film-card video{filter:grayscale(1) brightness(1.18) contrast(.72)}
+body[data-mode=film] .film-card:hover img,body[data-mode=film] .film-card:hover video{filter:none}
