@@ -1,21 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/inkfall",
-      "destination": "/inkfall/",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/inkfall/",
-      "destination": "https://inkfall.voidstudio.top"
-    },
-    {
-      "source": "/inkfall/:path*",
-      "destination": "https://inkfall.voidstudio.top/:path*"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
