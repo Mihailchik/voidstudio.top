@@ -94,34 +94,33 @@
 
 .share-sheet{border:0;padding:0;margin:0;inset:0;background:none;max-width:100vw;
   max-height:none;width:auto;height:auto;color:#171917}
-.share-sheet::backdrop{background:rgba(18,20,18,.42);backdrop-filter:blur(3px)}
-.share-sheet .wrap{height:100%;display:flex;align-items:center;justify-content:center;padding:16px}
-@media(max-width:640px){.share-sheet .wrap{align-items:flex-end;padding:10px;
-  padding-bottom:max(10px,env(safe-area-inset-bottom))}}
-.share-panel{background:#fbfbf8;border-radius:20px;width:min(430px,100%);padding:20px 18px 14px;
-  box-shadow:0 20px 60px rgba(16,20,16,.3);max-height:calc(100dvh - 32px);overflow:auto;
-  animation:share-rise .26s cubic-bezier(.2,.8,.3,1)}
-@keyframes share-rise{from{transform:translateY(22px);opacity:0}to{transform:none;opacity:1}}
-@media(prefers-reduced-motion:reduce){.share-panel{animation:none}}
-.share-panel h2{margin:0 0 4px;font-size:17px;font-weight:600;text-align:center}
-.share-panel .page{margin:0 0 16px;font-size:13px;color:#6d736c;text-align:center;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.share-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 6px;margin-bottom:14px}
-.share-grid a{display:flex;flex-direction:column;align-items:center;gap:7px;
-  text-decoration:none;color:inherit;font-size:11px;padding:4px 0;border-radius:12px}
-.share-grid i{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff}
-.share-grid svg{width:24px;height:24px;fill:currentColor}
-@media(hover:hover){.share-grid a:hover{background:rgba(23,25,23,.05)}}
-.share-grid a:active{transform:scale(.95)}
-.share-copy svg{width:17px;height:17px;fill:currentColor;flex:0 0 auto}
-.share-copy{width:100%;display:flex;align-items:center;justify-content:center;gap:9px;
-  border:1px solid rgba(23,25,23,.16);background:#fff;border-radius:13px;padding:13px;
-  font:inherit;font-size:14px;color:inherit;cursor:pointer}
-.share-copy:active{transform:scale(.99)}
-.share-note{margin:11px 2px 0;font-size:11.5px;line-height:1.45;color:#8a8f88;text-align:center}
-.share-cancel{width:100%;margin-top:10px;border:0;background:none;font:inherit;font-size:15px;
-  font-weight:500;color:#171917;padding:12px;cursor:pointer;border-radius:13px}
-@media(hover:hover){.share-cancel:hover{background:rgba(23,25,23,.05)}}
+.share-sheet::backdrop{background:rgba(18,20,18,.28)}
+.share-sheet .wrap{height:100%;position:relative}
+
+/* Список выезжает от самой кнопки, а не из середины экрана. */
+.share-list{position:absolute;width:268px;background:#fbfbf8;border-radius:14px;
+  border:1px solid rgba(23,25,23,.1);box-shadow:0 16px 44px rgba(16,20,16,.22);
+  padding:6px;overflow:hidden;animation:share-in .18s ease-out}
+@keyframes share-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.share-list{animation:none}}
+.share-list a,.share-list button{display:flex;align-items:center;gap:11px;width:100%;
+  padding:9px 10px;border:0;border-radius:9px;background:none;font:inherit;font-size:14px;
+  color:inherit;text-decoration:none;cursor:pointer;text-align:left;line-height:1.2}
+.share-list i{width:26px;height:26px;border-radius:7px;display:grid;place-items:center;
+  color:#fff;flex:0 0 auto}
+.share-list svg{width:15px;height:15px;fill:currentColor}
+.share-list .divider{height:1px;background:rgba(23,25,23,.09);margin:6px 8px}
+.share-list .copy i{background:#5b6b5a}
+@media(hover:hover){.share-list a:hover,.share-list button:hover{background:rgba(23,25,23,.06)}}
+.share-list a:active,.share-list button:active{background:rgba(23,25,23,.1)}
+.share-note{margin:4px 10px 6px;font-size:11px;line-height:1.4;color:#8a8f88}
+
+/* На телефоне тот же список, но снизу во всю ширину. */
+@media(max-width:640px){
+  .share-list{position:fixed;left:10px;right:10px;top:auto!important;width:auto;
+    bottom:max(10px,env(safe-area-inset-bottom));border-radius:16px;padding:7px}
+  .share-list a,.share-list button{padding:12px 11px;font-size:15px}
+}
 .share-toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%);z-index:70;
   background:#171917;color:#f6f6f2;font-size:13px;padding:11px 17px;border-radius:30px;
   box-shadow:0 10px 30px rgba(16,20,16,.3)}
@@ -137,24 +136,24 @@
   button.className = 'share-button';
   button.dataset.pos = cfg.position;
   button.setAttribute('aria-label', words.open);
-  button.innerHTML = svg('<path d="M18 16.1a3 3 0 0 0-2 .8l-7.1-4.1a3 3 0 0 0 0-1.6L16 7.1a3 3 0 1 0-1-2.1 3 3 0 0 0 .1.7L8 9.8a3 3 0 1 0 0 4.4l7.1 4.2a3 3 0 0 0-.1.6 3 3 0 1 0 3-2.9z"/>');
+  // Симметричный значок: стрелка вверх из лотка. Центр рисунка совпадает с
+  // центром холста 24×24, поэтому в круглой кнопке он не кажется смещённым.
+  button.innerHTML = svg('<path d="M12 2.5a1 1 0 0 1 .7.3l3.5 3.5a1 1 0 0 1-1.4 1.4L13 5.9V15a1 1 0 0 1-2 0V5.9L9.2 7.7a1 1 0 0 1-1.4-1.4l3.5-3.5a1 1 0 0 1 .7-.3z"/><path d="M5 10a1 1 0 0 1 1 1v8h12v-8a1 1 0 1 1 2 0v8.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 19.5V11a1 1 0 0 1 1-1z"/>');
   document.body.append(button);
 
   const sheet = document.createElement('dialog');
   sheet.className = 'share-sheet';
-  sheet.innerHTML = `<div class="wrap"><div class="share-panel" role="document">
-    <h2>${words.heading}</h2>
-    <p class="page">${escapeHtml(title)}</p>
-    <div class="share-grid">${networks.map(n => `
-      <a href="${n.link()}" target="_blank" rel="noopener" data-net="${n.name.toLowerCase()}">
+  sheet.innerHTML = `<div class="wrap"><div class="share-list" role="menu">
+    ${networks.map(n => `
+      <a role="menuitem" href="${n.link()}" target="_blank" rel="noopener" data-net="${n.name.toLowerCase()}">
         <i style="background:${n.colour}">${svg(n.icon)}</i><span>${n.name}</span>
-      </a>`).join('')}</div>
-    <button class="share-copy" type="button">
-      ${svg('<path d="M9 2h9a2 2 0 0 1 2 2v9h-2V4H9zM5 6h9a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v12h9V8z"/>')}
-      ${words.copy}
+      </a>`).join('')}
+    <div class="divider"></div>
+    <button class="copy" type="button" role="menuitem">
+      <i>${svg('<path d="M9 2h9a2 2 0 0 1 2 2v9h-2V4H9zM5 6h9a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v12h9V8z"/>')}</i>
+      <span>${words.copy}</span>
     </button>
     <p class="share-note">${words.hint}</p>
-    <button class="share-cancel" type="button">${words.cancel}</button>
   </div></div>`;
   document.body.append(sheet);
 
@@ -172,14 +171,36 @@
         if (e && e.name === 'AbortError') { track('cancelled'); return; }
       }
     }
+    placeList();
     sheet.showModal();
   });
 
-  sheet.querySelectorAll('.share-grid a').forEach(a => {
+  // Список встаёт рядом с кнопкой: над ней или под ней — смотря где больше места.
+  function placeList() {
+    const list = sheet.querySelector('.share-list');
+    list.style.cssText = '';
+    if (matchMedia('(max-width:640px)').matches) return;  // там он прижат к низу
+    const b = button.getBoundingClientRect();
+    const gap = 10;
+    list.style.visibility = 'hidden';
+    sheet.show();
+    const h = list.offsetHeight, w = list.offsetWidth;
+    sheet.close();
+    list.style.visibility = '';
+    const below = window.innerHeight - b.bottom - gap;
+    list.style.top = (below > h || b.top < h + gap
+      ? Math.min(b.bottom + gap, window.innerHeight - h - gap)
+      : b.top - h - gap) + 'px';
+    const right = cfg.position.endsWith('right');
+    list.style.left = Math.max(gap, Math.min(
+      right ? b.right - w : b.left, window.innerWidth - w - gap)) + 'px';
+  }
+
+  sheet.querySelectorAll('.share-list a').forEach(a => {
     a.addEventListener('click', () => { track(a.dataset.net); sheet.close(); });
   });
 
-  sheet.querySelector('.share-copy').addEventListener('click', async () => {
+  sheet.querySelector('.share-list .copy').addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(url);
     } catch {
@@ -194,10 +215,9 @@
     toast(words.copied);
   });
 
-  sheet.querySelector('.share-cancel').addEventListener('click', () => sheet.close());
   // Клик по тёмному полю вокруг панели тоже закрывает.
   sheet.addEventListener('click', e => {
-    if (!e.target.closest('.share-panel')) sheet.close();
+    if (!e.target.closest('.share-list')) sheet.close();
   });
 
   function toast(message) {
