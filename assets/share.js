@@ -21,7 +21,11 @@
   const lang = (document.documentElement.lang || 'ru').startsWith('ru') ? 'ru' : 'en';
 
   const canonical = document.querySelector('link[rel=canonical]');
-  const url = cfg.url || (canonical && canonical.href) || location.href.split('#')[0];
+  const raw = cfg.url || (canonical && canonical.href) || location.href.split('#')[0];
+  const url = raw.replace(/\/index\.html$/, '/').replace(/\?$/, '');
+  // В меню показываем адрес без «https://» и без косой черты на конце —
+  // так человек видит ровно то, что уедет в буфер.
+  const prettyUrl = url.replace(/^https?:\/\//, '').replace(/\/$/, '');
   const title = cfg.title || document.title;
   const descr = document.querySelector('meta[name=description]');
   const text = cfg.text || (descr && descr.content) || '';
@@ -113,6 +117,9 @@
 .share-list .copy i{background:#5b6b5a}
 @media(hover:hover){.share-list a:hover,.share-list button:hover{background:rgba(23,25,23,.06)}}
 .share-list a:active,.share-list button:active{background:rgba(23,25,23,.1)}
+.share-url{margin:2px 10px 6px;font-size:11.5px;line-height:1.3;color:#6d736c;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;direction:rtl;text-align:left}
 .share-note{margin:4px 10px 6px;font-size:11px;line-height:1.4;color:#8a8f88}
 
 /* На телефоне тот же список, но снизу во всю ширину. */
@@ -149,6 +156,7 @@
         <i style="background:${n.colour}">${svg(n.icon)}</i><span>${n.name}</span>
       </a>`).join('')}
     <div class="divider"></div>
+    <p class="share-url" title="${escapeHtml(url)}">${escapeHtml(prettyUrl)}</p>
     <button class="copy" type="button" role="menuitem">
       <i>${svg('<path d="M9 2h9a2 2 0 0 1 2 2v9h-2V4H9zM5 6h9a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2zm0 2v12h9V8z"/>')}</i>
       <span>${words.copy}</span>
