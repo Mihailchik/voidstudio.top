@@ -1,0 +1,36 @@
+# Void Studio
+
+> Void Studio (Void Studio . Lab) is an independent studio that builds websites, web tools, mobile apps, bots, automation, and AI images and video. The site is a portfolio with contacts. Russian is the main language, English lives under /en/.
+
+## Pages
+
+- [Home](https://voidstudio.top/): a strip of selected visual work
+- [Studio](https://voidstudio.top/studio.html): approach, services, selected projects, contacts
+- [Projects](https://voidstudio.top/projects.html): the full list of projects with links
+- [Home, English](https://voidstudio.top/en/)
+- [Studio, English](https://voidstudio.top/en/studio.html)
+- [Projects, English](https://voidstudio.top/en/projects.html)
+
+## Projects
+
+- [Surf](https://surf.voidstudio.top): surf forecast for Phuket, waves, wind, tide and live cams scored by beach
+- [Inkfall](https://inkfall.voidstudio.top): ink in water, a GPU fluid simulation driven by mouse, touch, hand gestures or voice
+- [Eyeball / Глазомер](https://glazomer.voidstudio.top): a daily browser game, five tasks done by eye
+- Argyns: an iOS and Android app, a digital registry for the twelve Argyn clans
+- FitTimer: an interval training timer for iPhone and iPad
+- Poster 2.0: a system that prepares and schedules one release for Telegram, Instagram, YouTube and Pikabu
+- Podcast Bot: a Telegram bot that collects podcasts from RSS, YouTube and Telegram into one channel
+
+## Services
+
+- Websites and interactive experiences: landing pages, portfolios, web tools
+- Product prototypes: a working version of an idea
+- Automation: bots and systems that take over repetitive manual work
+- AI images and video
+
+## Contacts
+
+- Telegram: https://t.me/voidstudio_lab
+- Instagram: https://www.instagram.com/voidstudio.lab/
+- YouTube: https://www.youtube.com/@voidstudiolab
+- GitHub: https://github.com/Mihailchik
