@@ -23,3 +23,5 @@
 }
 .button:active,.media-link:active,.nav-contact:active{transform:scale(.97)}
 .contact-button:active,.section-head>a:active,.about-text a:active,.project-links a:active,.projects-contact a:active,footer a:active,.site-logo:active{opacity:.4}
+.proof a{border-bottom:1px solid var(--line);transition:border-color .2s}
+@media(hover:hover){.proof a:hover{border-color:currentColor}.service h3 a:hover{opacity:.6}}

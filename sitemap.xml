@@ -36,4 +36,52 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects.html" />
   </url>
+  <url>
+    <loc>https://voidstudio.top/websites.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/websites.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/websites.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/websites.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/apps.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/apps.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/apps.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/apps.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/automation.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/automation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/automation.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/ai-visuals.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/ai-visuals.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/ai-visuals.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/ai-visuals.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/websites.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/websites.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/websites.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/websites.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/apps.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/apps.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/apps.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/apps.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/automation.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/automation.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/automation.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/automation.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/ai-visuals.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/ai-visuals.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/ai-visuals.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/ai-visuals.html" />
+  </url>
 </urlset>

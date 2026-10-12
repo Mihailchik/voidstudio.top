@@ -23,10 +23,12 @@
 
 ## Services
 
-- Websites and interactive experiences: landing pages, portfolios, web tools
-- Product prototypes: a working version of an idea
-- Automation: bots and systems that take over repetitive manual work
-- AI images and video
+- [Websites and interactive work](https://voidstudio.top/en/websites.html): landing pages, portfolios, web services, browser games, WebGL graphics
+- [Apps and prototypes](https://voidstudio.top/en/apps.html): iOS and Android apps with Flutter, working product prototypes
+- [Bots and automation](https://voidstudio.top/en/automation.html): Telegram bots, scheduled publishing, audio and video processing
+- [AI images and video](https://voidstudio.top/en/ai-visuals.html): advertising shots, posters, illustration, short videos
+
+Russian versions of the service pages: /websites.html, /apps.html, /automation.html, /ai-visuals.html
 
 ## Contacts
 
