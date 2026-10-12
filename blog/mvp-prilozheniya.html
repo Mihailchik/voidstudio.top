@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>(()=>{const current=document.documentElement.lang==='ru'?'ru':'en';let saved='';try{saved=localStorage.getItem('voidstudio-language')||''}catch{}const browser=(navigator.languages?.[0]||navigator.language||'en').toLowerCase();const wanted=saved||(browser.startsWith('ru')?'ru':'en');const routes={"/blog/mvp-prilozheniya.html":{"ru":"/blog/mvp-prilozheniya.html","en":"/en/blog/app-mvp.html"},"/en/blog/app-mvp.html":{"ru":"/blog/mvp-prilozheniya.html","en":"/en/blog/app-mvp.html"}};const target=routes[location.pathname]?.[wanted];if(target&&wanted!==current){location.replace(target+location.search+location.hash);return}addEventListener('DOMContentLoaded',()=>document.querySelectorAll('.nav-language[hreflang]').forEach(link=>link.addEventListener('click',()=>{try{localStorage.setItem('voidstudio-language',link.hreflang)}catch{}})))})();</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9G3NGMQ6F"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-E9G3NGMQ6F');</script>
 <meta name="theme-color" content="#f4f4f0">
@@ -10,6 +11,9 @@
 <meta name="description" content="Что такое MVP мобильного приложения, чем он отличается от прототипа и что в него включать. На примере приложений FitTimer и Argyns.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://voidstudio.top/blog/mvp-prilozheniya.html">
+<link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/mvp-prilozheniya.html">
+<link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/app-mvp.html">
+<link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/mvp-prilozheniya.html">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Void Studio">
@@ -24,7 +28,7 @@
 <link rel="icon" href="/assets/img/favicon-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/site.css?v=9">
-<link rel="stylesheet" href="/assets/blog.css?v=1">
+<link rel="stylesheet" href="/assets/blog.css?v=2">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -76,7 +80,7 @@
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body><header class="site-header"><a class="site-logo" href="/" aria-label="Void Studio — визуальные работы"></a><nav aria-label="Основная навигация"><a href="/">Работы</a><a href="/projects.html">Проекты</a><a href="/blog/">Блог</a><a href="/studio.html#about">О студии</a><a class="nav-contact" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Написать ↗</a></nav></header>
+<body><header class="site-header"><a class="site-logo" href="/" aria-label="Void Studio — визуальные работы"></a><nav aria-label="Основная навигация"><a href="/">Работы</a><a href="/projects.html">Проекты</a><a href="/blog/">Блог</a><a href="/studio.html#about">О студии</a><a class="nav-language" href="/en/blog/app-mvp.html" lang="en" hreflang="en" aria-label="Переключить на английский">EN</a><a class="nav-contact" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Написать ↗</a></nav></header>
 <main>
 <article class="post">
 <header class="post-head"><p class="kicker"><a href="/blog/">Блог</a> · <time datetime="2026-10-12">12 октября 2026 года</time></p><h1>MVP приложения: что это и как сделать первую версию</h1><p class="post-lead">MVP — это первая рабочая версия приложения, в которой есть только главное. Она нужна, чтобы проверить идею на людях до того, как потрачены большие деньги.</p></header>
@@ -119,6 +123,7 @@
 <section class="post-more"><p class="kicker">Ещё в блоге</p><div><a class="post-link" href="/blog/avtoposting-v-socseti.html"><span>Автопостинг в соцсети без ручной работы</span><span aria-hidden="true">→</span></a><a class="post-link" href="/blog/telegram-bot-dlya-biznesa.html"><span>Telegram-бот для бизнеса: что умеет и от чего зависит цена</span><span aria-hidden="true">→</span></a><a class="post-link" href="/blog/interaktivnyj-sajt.html"><span>Интерактивный сайт: что это и примеры</span><span aria-hidden="true">→</span></a></div></section>
 </main>
 <footer><span>© 2026 Void Studio . Lab</span><div><a href="/studio.html">О студии</a><a href="/projects.html">Проекты</a><a href="/blog/">Блог</a><a href="https://github.com/Mihailchik" target="_blank" rel="noopener">GitHub ↗</a></div></footer>
+<script src="/assets/track.js" defer></script>
 <script>window.shareConfig={position:"bottom-right"};</script>
 <script src="/assets/share.js" defer></script>
 </body></html>

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+<script>(()=>{const current=document.documentElement.lang==='ru'?'ru':'en';let saved='';try{saved=localStorage.getItem('voidstudio-language')||''}catch{}const browser=(navigator.languages?.[0]||navigator.language||'en').toLowerCase();const wanted=saved||(browser.startsWith('ru')?'ru':'en');const routes={"/blog/":{"ru":"/blog/","en":"/en/blog/"},"/en/blog/":{"ru":"/blog/","en":"/en/blog/"}};const target=routes[location.pathname]?.[wanted];if(target&&wanted!==current){location.replace(target+location.search+location.hash);return}addEventListener('DOMContentLoaded',()=>document.querySelectorAll('.nav-language[hreflang]').forEach(link=>link.addEventListener('click',()=>{try{localStorage.setItem('voidstudio-language',link.hreflang)}catch{}})))})();</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9G3NGMQ6F"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-E9G3NGMQ6F');</script>
 <meta name="theme-color" content="#f4f4f0">
@@ -10,6 +11,9 @@
 <meta name="description" content="Статьи Void Studio о разработке сайтов, приложений, Telegram-ботов и автоматизации. Объясняем на примерах собственных проектов.">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="https://voidstudio.top/blog/">
+<link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/">
+<link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/">
+<link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="Void Studio">
@@ -24,7 +28,7 @@
 <link rel="icon" href="/assets/img/favicon-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/site.css?v=9">
-<link rel="stylesheet" href="/assets/blog.css?v=1">
+<link rel="stylesheet" href="/assets/blog.css?v=2">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -68,12 +72,13 @@
 <script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
 <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body><header class="site-header"><a class="site-logo" href="/" aria-label="Void Studio — визуальные работы"></a><nav aria-label="Основная навигация"><a href="/">Работы</a><a href="/projects.html">Проекты</a><a href="/blog/">Блог</a><a href="/studio.html#about">О студии</a><a class="nav-contact" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Написать ↗</a></nav></header>
+<body><header class="site-header"><a class="site-logo" href="/" aria-label="Void Studio — визуальные работы"></a><nav aria-label="Основная навигация"><a href="/">Работы</a><a href="/projects.html">Проекты</a><a href="/blog/">Блог</a><a href="/studio.html#about">О студии</a><a class="nav-language" href="/en/blog/" lang="en" hreflang="en" aria-label="Переключить на английский">EN</a><a class="nav-contact" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Написать ↗</a></nav></header>
 <main>
 <section class="blog-hero"><p class="kicker">Блог</p><h1>Как это устроено.</h1><p>Пишем о сайтах, приложениях, ботах и автоматизации. Объясняем на своих проектах, которые можно открыть и проверить.</p></section>
 <section class="post-list"><article class="post-row"><time datetime="2026-10-12">12 октября 2026 года</time><h2><a href="/blog/avtoposting-v-socseti.html">Автопостинг в соцсети без ручной работы</a></h2><p>Что такое автопостинг, когда хватает готового сервиса, а когда нужна своя система. Разбираем на примере Poster 2.0, который ведёт публикации Void Studio.</p></article><article class="post-row"><time datetime="2026-10-12">12 октября 2026 года</time><h2><a href="/blog/telegram-bot-dlya-biznesa.html">Telegram-бот для бизнеса: что умеет и от чего зависит цена</a></h2><p>Какие задачи решает Telegram-бот, как он устроен внутри и из чего складывается стоимость разработки и содержания. С примером работающего бота.</p></article><article class="post-row"><time datetime="2026-10-12">12 октября 2026 года</time><h2><a href="/blog/mvp-prilozheniya.html">MVP приложения: что это и как сделать первую версию</a></h2><p>Что такое MVP мобильного приложения, чем он отличается от прототипа и что в него включать. На примере приложений FitTimer и Argyns.</p></article><article class="post-row"><time datetime="2026-10-12">12 октября 2026 года</time><h2><a href="/blog/interaktivnyj-sajt.html">Интерактивный сайт: что это и примеры</a></h2><p>Что такое интерактивный сайт простыми словами, какие бывают виды и на чём их делают. Четыре примера, которые можно открыть и попробовать.</p></article></section>
 </main>
 <footer><span>© 2026 Void Studio . Lab</span><div><a href="/studio.html">О студии</a><a href="/projects.html">Проекты</a><a href="/blog/">Блог</a><a href="https://github.com/Mihailchik" target="_blank" rel="noopener">GitHub ↗</a></div></footer>
+<script src="/assets/track.js" defer></script>
 <script>window.shareConfig={position:"bottom-right"};</script>
 <script src="/assets/share.js" defer></script>
 </body></html>

@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://voidstudio.top"
 TELEGRAM = "https://t.me/LuchkoOlga"
-CSS_VERSION = 2
+CSS_VERSION = 3
 
 UI = {
     "ru": {
@@ -209,14 +209,26 @@ SERVICES = [
     },
 ]
 
-# Статьи блога по теме услуги. Блог только на русском.
+# Статьи блога по теме услуги.
 RELATED = {
-    "websites": [("blog/interaktivnyj-sajt.html", "Интерактивный сайт: что это и примеры")],
-    "apps": [("blog/mvp-prilozheniya.html", "MVP приложения: что это и как сделать первую версию")],
-    "automation": [
-        ("blog/telegram-bot-dlya-biznesa.html", "Telegram-бот для бизнеса: что умеет и от чего зависит цена"),
-        ("blog/avtoposting-v-socseti.html", "Автопостинг в соцсети без ручной работы"),
-    ],
+    "websites": {
+        "ru": [("blog/interaktivnyj-sajt.html", "Интерактивный сайт: что это и примеры")],
+        "en": [("blog/interactive-website.html", "Interactive websites: what they are, with examples")],
+    },
+    "apps": {
+        "ru": [("blog/mvp-prilozheniya.html", "MVP приложения: что это и как сделать первую версию")],
+        "en": [("blog/app-mvp.html", "An app MVP: what it is and how to build the first version")],
+    },
+    "automation": {
+        "ru": [
+            ("blog/telegram-bot-dlya-biznesa.html", "Telegram-бот для бизнеса: что умеет и от чего зависит цена"),
+            ("blog/avtoposting-v-socseti.html", "Автопостинг в соцсети без ручной работы"),
+        ],
+        "en": [
+            ("blog/telegram-bot-for-business.html", "A Telegram bot for business: what it can do and what the cost depends on"),
+            ("blog/scheduled-social-posting.html", "Scheduled social posting without manual work"),
+        ],
+    },
 }
 
 SLUGS = [s["slug"] for s in SERVICES]
@@ -295,7 +307,7 @@ def render(service, lang):
             rows += (
                 f'<article class="project-row"><span class="index">{i:02d}</span><h3>{e(name)}<small>{e(kind)}</small></h3>'
                 f'<div class="project-description"><p>{e(body)}</p></div>'
-                f'<div class="project-links">{link}<a href="projects.html#{key}">{more} →</a></div></article>'
+                f'<div class="project-links">{link}<a href="projects/{key}.html">{more} →</a></div></article>'
             )
         examples = (
             f'<section class="service-examples"><div class="section-head"><div><p class="kicker">{ui["examples_kicker"]}</p>'
@@ -320,13 +332,13 @@ def render(service, lang):
     )
     footer = "".join(f'<a href="{href}">{label}</a>' for href, label in ui["footer"])
     related = ""
-    if lang == "ru" and RELATED.get(slug):
+    if RELATED.get(slug):
         links = "".join(
             f'<a class="other-service" href="{href}"><span>{e(title)}</span><span aria-hidden="true">→</span></a>'
-            for href, title in RELATED[slug]
+            for href, title in RELATED[slug][lang]
         )
-        related = f'<section class="other-services related"><p class="kicker">Статьи по теме</p><div>{links}</div></section>\n'
-        footer += '<a href="blog/">Блог</a>'
+        related = f'<section class="other-services related"><p class="kicker">{"Статьи по теме" if lang == "ru" else "Related articles"}</p><div>{links}</div></section>\n'
+    footer += '<a href="blog/">Блог</a>' if lang == "ru" else '<a href="blog/">Blog</a>'
 
     return f"""<!doctype html>
 <html lang="{ui['html_lang']}">
@@ -378,6 +390,7 @@ def render(service, lang):
 <section class="projects-contact"><p class="kicker">{ui['cta_kicker']}</p><h2>{ui['cta_title']}</h2><a href="{TELEGRAM}" target="_blank" rel="noopener">{ui['cta_link']}</a></section>
 </main>
 <footer><span>© 2026 Void Studio . Lab</span><div>{footer}<a href="https://github.com/Mihailchik" target="_blank" rel="noopener">GitHub ↗</a></div></footer>
+<script src="{up}assets/track.js" defer></script>
 <script>window.shareConfig={{position:"bottom-right"}};</script>
 <script src="{up}assets/share.js" defer></script>
 </body></html>

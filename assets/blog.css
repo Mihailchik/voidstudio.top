@@ -51,3 +51,4 @@
   /* На телефоне в шапке остаётся только кнопка связи, поэтому ссылку на блог возвращаем */
   .site-header nav a[href="/blog/"]{display:inline!important}
 }
+@media(max-width:850px){.site-header nav a[href$="/blog/"]{display:inline!important}}

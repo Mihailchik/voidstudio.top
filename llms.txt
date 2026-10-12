@@ -13,13 +13,15 @@
 
 ## Projects
 
-- [Surf](https://surf.voidstudio.top): surf forecast for Phuket, waves, wind, tide and live cams scored by beach
-- [Inkfall](https://inkfall.voidstudio.top): ink in water, a GPU fluid simulation driven by mouse, touch, hand gestures or voice
-- [Eyeball / Глазомер](https://glazomer.voidstudio.top): a daily browser game, five tasks done by eye
-- Argyns: an iOS and Android app, a digital registry for the twelve Argyn clans
-- FitTimer: an interval training timer for iPhone and iPad
-- Poster 2.0: a system that prepares and schedules one release for Telegram, Instagram, YouTube and Pikabu
-- Podcast Bot: a Telegram bot that collects podcasts from RSS, YouTube and Telegram into one channel
+- [Surf](https://voidstudio.top/en/projects/surf.html): surf forecast for Phuket, waves, wind, tide and live cams scored by beach. Live at https://surf.voidstudio.top
+- [Inkfall](https://voidstudio.top/en/projects/inkfall.html): ink in water, a GPU fluid simulation driven by mouse, touch, hand gestures or voice. Live at https://inkfall.voidstudio.top
+- [Eyeball / Глазомер](https://voidstudio.top/en/projects/glazomer.html): a daily browser game, five tasks done by eye. Live at https://glazomer.voidstudio.top
+- [Argyns](https://voidstudio.top/en/projects/argyns.html): an iOS and Android app, a digital registry for the twelve Argyn clans
+- [FitTimer](https://voidstudio.top/en/projects/fittimer.html): an interval training timer for iPhone and iPad
+- [Poster 2.0](https://voidstudio.top/en/projects/poster.html): a system that prepares and schedules one release for Telegram, Instagram, YouTube and Pikabu
+- [Podcast Bot](https://voidstudio.top/en/projects/podcast.html): a Telegram bot that collects podcasts from RSS, YouTube and Telegram into one channel
+
+Russian versions of the project pages live under /projects/.
 
 ## Services
 
@@ -30,12 +32,14 @@
 
 Russian versions of the service pages: /websites.html, /apps.html, /automation.html, /ai-visuals.html
 
-## Blog (Russian)
+## Blog
 
-- [Автопостинг в соцсети](https://voidstudio.top/blog/avtoposting-v-socseti.html): scheduled publishing to several platforms, explained through Poster 2.0
-- [Telegram-бот для бизнеса](https://voidstudio.top/blog/telegram-bot-dlya-biznesa.html): what a Telegram bot can do and what its cost depends on
-- [MVP приложения](https://voidstudio.top/blog/mvp-prilozheniya.html): what an app MVP is and how to build the first version
-- [Интерактивный сайт](https://voidstudio.top/blog/interaktivnyj-sajt.html): what an interactive website is, with examples
+- [Scheduled social posting](https://voidstudio.top/en/blog/scheduled-social-posting.html): publishing to several platforms on a schedule, explained through Poster 2.0
+- [A Telegram bot for business](https://voidstudio.top/en/blog/telegram-bot-for-business.html): what a Telegram bot can do and what its cost depends on
+- [An app MVP](https://voidstudio.top/en/blog/app-mvp.html): what an app MVP is and how to build the first version
+- [Interactive websites](https://voidstudio.top/en/blog/interactive-website.html): what an interactive website is, with examples
+
+Russian versions of the articles live under /blog/.
 
 ## Contacts
 

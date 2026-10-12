@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>(()=>{const current=document.documentElement.lang==='ru'?'ru':'en';let saved='';try{saved=localStorage.getItem('voidstudio-language')||''}catch{}const browser=(navigator.languages?.[0]||navigator.language||'en').toLowerCase();const wanted=saved||(browser.startsWith('ru')?'ru':'en');const routes={"/projects/surf.html":{"ru":"/projects/surf.html","en":"/en/projects/surf.html"},"/en/projects/surf.html":{"ru":"/projects/surf.html","en":"/en/projects/surf.html"}};const target=routes[location.pathname]?.[wanted];if(target&&wanted!==current){location.replace(target+location.search+location.hash);return}addEventListener('DOMContentLoaded',()=>document.querySelectorAll('.nav-language[hreflang]').forEach(link=>link.addEventListener('click',()=>{try{localStorage.setItem('voidstudio-language',link.hreflang)}catch{}})))})();</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9G3NGMQ6F"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-E9G3NGMQ6F');</script>
+<meta name="theme-color" content="#f4f4f0">
+<title>Surf — a surf forecast for Phuket — Void Studio</title>
+<meta name="description" content="Surf shows waves, wind, tide and beach cameras for Phuket and scores every beach from 0 to 10. How the service works and what it is built with.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://voidstudio.top/en/projects/surf.html">
+<link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/surf.html">
+<link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/surf.html">
+<link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/surf.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Void Studio">
+<meta property="og:title" content="Surf — a surf forecast for Phuket">
+<meta property="og:description" content="Is it worth going surfing right now?">
+<meta property="og:url" content="https://voidstudio.top/en/projects/surf.html">
+<meta property="og:image" content="https://voidstudio.top/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css?v=9">
+<link rel="stylesheet" href="/assets/services.css?v=3">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://voidstudio.top/en/projects/surf.html#project",
+      "url": "https://voidstudio.top/en/projects/surf.html",
+      "name": "Surf",
+      "description": "Surf shows waves, wind, tide and beach cameras for Phuket and scores every beach from 0 to 10. How the service works and what it is built with.",
+      "inLanguage": "en",
+      "creator": {
+        "@id": "https://voidstudio.top/#organization"
+      },
+      "applicationCategory": "Web service",
+      "operatingSystem": "Any"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Void Studio",
+          "item": "https://voidstudio.top/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://voidstudio.top/en/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Surf",
+          "item": "https://voidstudio.top/en/projects/surf.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body><header class="site-header"><a class="site-logo" href="/en/" aria-label="Void Studio — visual work"></a><nav aria-label="Main navigation"><a href="/en/">Work</a><a href="/en/projects.html">Projects</a><a href="/en/studio.html#about">Studio</a><a class="nav-language" href="/projects/surf.html" lang="ru" hreflang="ru" aria-label="Switch to Russian">RU</a><a class="nav-contact" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Contact ↗</a></nav></header>
+<main>
+<section class="service-hero project-hero"><p class="kicker"><a href="/en/projects.html">Projects</a> · Web service</p><h1>Surf</h1><p>Is it worth going surfing right now?</p><div class="hero-actions"><a class="button primary" href="https://surf.voidstudio.top" target="_blank" rel="noopener">Open Surf ↗</a><a class="button" href="https://github.com/Mihailchik/surf" target="_blank" rel="noopener">Code on GitHub ↗</a></div></section>
+
+<section class="project-what"><p class="kicker">What it is</p><p>To know whether there are waves today you have to open several weather sites and compare charts. Surf answers one question: is it worth going now, and to which beach. Waves, wind, tide and beach cameras for Phuket and Khao Lak sit on one page.</p></section>
+<section class="services"><p class="kicker">How it works</p><div class="service-grid"><article class="service"><span>01</span><h3>A score from 0 to 10</h3><p>Every hour at every beach gets a number and a word, from flat to epic. The score is rounded down so a beach is never worse than promised.</p></article><article class="service"><span>02</span><h3>Several models</h3><p>Data from Open-Meteo, MET Norway and NOAA is combined into a median. The spread between sources shows how far the forecast can be trusted.</p></article><article class="service"><span>03</span><h3>No server</h3><p>It is a single static page. Data is loaded straight in the browser, with no sign-up and no keys.</p></article><article class="service"><span>04</span><h3>Forecast history</h3><p>Every morning the site records what the forecast promised and what the models show for the day that passed. This makes it clear where the forecast is wrong.</p></article><article class="service"><span>05</span><h3>Three languages</h3><p>The interface is in English, Russian and Thai.</p></article></div><p class="stack"><span>Built with:</span> Vanilla JS · Open-Meteo · MET Norway · NOAA · GitHub Pages</p></section>
+<section class="other-services related"><p class="kicker">Related article</p><div><a class="other-service" href="/en/blog/interactive-website.html"><span>Interactive websites: what they are, with examples</span><span aria-hidden="true">→</span></a></div></section>
+<section class="project-service"><p class="kicker">We can build something similar</p><a class="project-service-link" href="/en/websites.html">Websites and interactive work →</a><p>Tell us about your task and we will suggest a solution.</p><a class="button primary" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Message us on Telegram ↗</a></section>
+<section class="other-services"><p class="kicker">Other projects</p><h2>What else we have built.</h2><div><a class="other-service" href="/en/projects/inkfall.html"><span>Inkfall <small>Interactive graphic</small></span><span aria-hidden="true">→</span></a><a class="other-service" href="/en/projects/glazomer.html"><span>Eyeball <small>Browser game</small></span><span aria-hidden="true">→</span></a><a class="other-service" href="/en/projects/argyns.html"><span>Argyns <small>iOS and Android app</small></span><span aria-hidden="true">→</span></a><a class="other-service" href="/en/projects/fittimer.html"><span>FitTimer <small>Mobile app</small></span><span aria-hidden="true">→</span></a><a class="other-service" href="/en/projects/poster.html"><span>Poster 2.0 <small>Automation</small></span><span aria-hidden="true">→</span></a><a class="other-service" href="/en/projects/podcast.html"><span>Podcast Bot <small>Telegram bot</small></span><span aria-hidden="true">→</span></a></div></section>
+</main>
+<footer><span>© 2026 Void Studio . Lab</span><div><a href="/en/studio.html">Studio</a><a href="/en/projects.html">Projects</a><a href="/en/blog/">Blog</a><a href="https://github.com/Mihailchik" target="_blank" rel="noopener">GitHub ↗</a></div></footer>
+<script src="/assets/track.js" defer></script>
+<script>window.shareConfig={position:"bottom-right"};</script>
+<script src="/assets/share.js" defer></script>
+</body></html>

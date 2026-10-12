@@ -7,7 +7,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/" />
   </url>
   <url>
+    <loc>https://voidstudio.top/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/" />
+  </url>
+  <url>
     <loc>https://voidstudio.top/studio.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/studio.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/studio.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/studio.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/studio.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/studio.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/studio.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/studio.html" />
@@ -17,18 +29,6 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects.html" />
-  </url>
-  <url>
-    <loc>https://voidstudio.top/en/</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/" />
-  </url>
-  <url>
-    <loc>https://voidstudio.top/en/studio.html</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/studio.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/studio.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/studio.html" />
   </url>
   <url>
     <loc>https://voidstudio.top/en/projects.html</loc>
@@ -43,7 +43,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/websites.html" />
   </url>
   <url>
+    <loc>https://voidstudio.top/en/websites.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/websites.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/websites.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/websites.html" />
+  </url>
+  <url>
     <loc>https://voidstudio.top/apps.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/apps.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/apps.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/apps.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/apps.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/apps.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/apps.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/apps.html" />
@@ -55,28 +67,16 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/automation.html" />
   </url>
   <url>
-    <loc>https://voidstudio.top/ai-visuals.html</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/ai-visuals.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/ai-visuals.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/ai-visuals.html" />
-  </url>
-  <url>
-    <loc>https://voidstudio.top/en/websites.html</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/websites.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/websites.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/websites.html" />
-  </url>
-  <url>
-    <loc>https://voidstudio.top/en/apps.html</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/apps.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/apps.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/apps.html" />
-  </url>
-  <url>
     <loc>https://voidstudio.top/en/automation.html</loc>
     <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/automation.html" />
     <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/automation.html" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/automation.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/ai-visuals.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/ai-visuals.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/ai-visuals.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/ai-visuals.html" />
   </url>
   <url>
     <loc>https://voidstudio.top/en/ai-visuals.html</loc>
@@ -85,23 +85,147 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/ai-visuals.html" />
   </url>
   <url>
+    <loc>https://voidstudio.top/projects/surf.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/surf.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/surf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/surf.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/projects/surf.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/surf.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/surf.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/surf.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/projects/inkfall.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/inkfall.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/inkfall.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/inkfall.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/projects/inkfall.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/inkfall.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/inkfall.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/inkfall.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/projects/glazomer.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/glazomer.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/glazomer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/glazomer.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/projects/glazomer.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/glazomer.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/glazomer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/glazomer.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/projects/argyns.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/argyns.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/argyns.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/argyns.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/projects/argyns.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/argyns.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/argyns.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/argyns.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/projects/fittimer.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/fittimer.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/fittimer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/fittimer.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/projects/fittimer.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/fittimer.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/fittimer.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/fittimer.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/projects/poster.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/poster.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/poster.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/poster.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/projects/poster.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/poster.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/poster.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/poster.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/projects/podcast.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/podcast.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/podcast.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/podcast.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/projects/podcast.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/podcast.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/podcast.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/podcast.html" />
+  </url>
+  <url>
     <loc>https://voidstudio.top/blog/</loc>
-    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/" />
   </url>
   <url>
     <loc>https://voidstudio.top/blog/avtoposting-v-socseti.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/avtoposting-v-socseti.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/scheduled-social-posting.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/avtoposting-v-socseti.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/blog/scheduled-social-posting.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/avtoposting-v-socseti.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/scheduled-social-posting.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/avtoposting-v-socseti.html" />
   </url>
   <url>
     <loc>https://voidstudio.top/blog/telegram-bot-dlya-biznesa.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/telegram-bot-dlya-biznesa.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/telegram-bot-for-business.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/telegram-bot-dlya-biznesa.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/blog/telegram-bot-for-business.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/telegram-bot-dlya-biznesa.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/telegram-bot-for-business.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/telegram-bot-dlya-biznesa.html" />
   </url>
   <url>
     <loc>https://voidstudio.top/blog/mvp-prilozheniya.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/mvp-prilozheniya.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/app-mvp.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/mvp-prilozheniya.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/blog/app-mvp.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/mvp-prilozheniya.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/app-mvp.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/mvp-prilozheniya.html" />
   </url>
   <url>
     <loc>https://voidstudio.top/blog/interaktivnyj-sajt.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/interaktivnyj-sajt.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/interactive-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/interaktivnyj-sajt.html" />
+  </url>
+  <url>
+    <loc>https://voidstudio.top/en/blog/interactive-website.html</loc>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://voidstudio.top/blog/interaktivnyj-sajt.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://voidstudio.top/en/blog/interactive-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://voidstudio.top/blog/interaktivnyj-sajt.html" />
   </url>
 </urlset>

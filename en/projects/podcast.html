@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script>(()=>{const current=document.documentElement.lang==='ru'?'ru':'en';let saved='';try{saved=localStorage.getItem('voidstudio-language')||''}catch{}const browser=(navigator.languages?.[0]||navigator.language||'en').toLowerCase();const wanted=saved||(browser.startsWith('ru')?'ru':'en');const routes={"/projects/podcast.html":{"ru":"/projects/podcast.html","en":"/en/projects/podcast.html"},"/en/projects/podcast.html":{"ru":"/projects/podcast.html","en":"/en/projects/podcast.html"}};const target=routes[location.pathname]?.[wanted];if(target&&wanted!==current){location.replace(target+location.search+location.hash);return}addEventListener('DOMContentLoaded',()=>document.querySelectorAll('.nav-language[hreflang]').forEach(link=>link.addEventListener('click',()=>{try{localStorage.setItem('voidstudio-language',link.hreflang)}catch{}})))})();</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E9G3NGMQ6F"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-E9G3NGMQ6F');</script>
+<meta name="theme-color" content="#f4f4f0">
+<title>Podcast Bot — a Telegram bot that gathers podcasts into one channel — Void Studio</title>
+<meta name="description" content="Podcast Bot watches RSS, YouTube and Telegram, downloads new episodes, converts audio to MP3 and sends it to a channel. How the bot works.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link rel="canonical" href="https://voidstudio.top/en/projects/podcast.html">
+<link rel="alternate" hreflang="ru" href="https://voidstudio.top/projects/podcast.html">
+<link rel="alternate" hreflang="en" href="https://voidstudio.top/en/projects/podcast.html">
+<link rel="alternate" hreflang="x-default" href="https://voidstudio.top/projects/podcast.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Void Studio">
+<meta property="og:title" content="Podcast Bot — a Telegram bot that gathers podcasts into one channel">
+<meta property="og:description" content="Podcasts from different sources in one channel.">
+<meta property="og:url" content="https://voidstudio.top/en/projects/podcast.html">
+<meta property="og:image" content="https://voidstudio.top/assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/assets/img/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css?v=9">
+<link rel="stylesheet" href="/assets/services.css?v=3">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://voidstudio.top/en/projects/podcast.html#project",
+      "url": "https://voidstudio.top/en/projects/podcast.html",
+      "name": "Podcast Bot",
+      "description": "Podcast Bot watches RSS, YouTube and Telegram, downloads new episodes, converts audio to MP3 and sends it to a channel. How the bot works.",
+      "inLanguage": "en",
+      "creator": {
+        "@id": "https://voidstudio.top/#organization"
+      },
+      "applicationCategory": "Telegram bot"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Void Studio",
+          "item": "https://voidstudio.top/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://voidstudio.top/en/projects.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Podcast Bot",
+          "item": "https://voidstudio.top/en/projects/podcast.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script>
+<script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body><header class="site-header"><a class="site-logo" href="/en/" aria-label="Void Studio — visual work"></a><nav aria-label="Main navigation"><a href="/en/">Work</a><a href="/en/projects.html">Projects</a><a href="/en/studio.html#about">Studio</a><a class="nav-language" href="/projects/podcast.html" lang="ru" hreflang="ru" aria-label="Switch to Russian">RU</a><a class="nav-contact" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Contact ↗</a></nav></header>
+<main>
+<section class="service-hero project-hero"><p class="kicker"><a href="/en/projects.html">Projects</a> · Telegram bot</p><h1>Podcast Bot</h1><p>Podcasts from different sources in one channel.</p><div class="hero-actions"><a class="button primary" href="https://github.com/Mihailchik/podcastQ" target="_blank" rel="noopener">Code on GitHub ↗</a></div></section>
+
+<section class="project-what"><p class="kicker">What it is</p><p>Podcast Bot gathers podcasts from different places into one Telegram channel. It watches the sources by itself, downloads new episodes and sends them in a form that is easy to listen to.</p></section>
+<section class="services"><p class="kicker">How it works</p><div class="service-grid"><article class="service"><span>01</span><h3>Three kinds of sources</h3><p>RSS feeds, YouTube channels and playlists, and Telegram channels.</p></article><article class="service"><span>02</span><h3>Scheduled checks</h3><p>The bot checks the sources and picks up new episodes by itself; no one has to do it.</p></article><article class="service"><span>03</span><h3>Two versions</h3><p>Every episode is converted to MP3 and sent in two versions: normal and double speed.</p></article><article class="service"><span>04</span><h3>Large files</h3><p>Files that are too large are split into parts before sending.</p></article><article class="service"><span>05</span><h3>Links from people</h3><p>You can send the bot a link and it will queue it for processing.</p></article></div><p class="stack"><span>Built with:</span> Python · aiogram · yt-dlp · ffmpeg · SQLite</p></section>
+<section class="other-services related"><p class="kicker">Related article</p><div><a class="other-service" href="/en/blog/telegram-bot-for-business.html"><span>A Telegram bot for business: what it can do and what the cost depends on</span><span aria-hidden="true">→</span></a></div></section>
+<section class="project-service"><p class="kicker">We can build something similar</p><a class="project-service-link" href="/en/automation.html">Bots and automation →</a><p>Tell us about your task and we will suggest a solution.</p><a class="button primary" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Message us on Telegram ↗</a></section>
+<section class="other-services"><p class="kicker">Other projects</p><h2>What else we have built.</h2><div><a class="other-service" href="/en/projects/surf.html"><span>Surf <small>Web service</small></span><span aria-hidden="true">→</span></a><a class="other-service" href="/en/projects/inkfall.html"><span>Inkfall <small>Interactive graphic</small></span><span aria-hidden="true">→</span></a><a class="other-service" href="/en/projects/glazomer.html"><span>Eyeball <small>Browser game</small></span><span aria-hidden="true">→</span></a><a class="other-service" href="/en/projects/argyns.html"><span>Argyns <small>iOS and Android app</small></span><span aria-hidden="true">→</span></a><a class="other-service" href="/en/projects/fittimer.html"><span>FitTimer <small>Mobile app</small></span><span aria-hidden="true">→</span></a><a class="other-service" href="/en/projects/poster.html"><span>Poster 2.0 <small>Automation</small></span><span aria-hidden="true">→</span></a></div></section>
+</main>
+<footer><span>© 2026 Void Studio . Lab</span><div><a href="/en/studio.html">Studio</a><a href="/en/projects.html">Projects</a><a href="/en/blog/">Blog</a><a href="https://github.com/Mihailchik" target="_blank" rel="noopener">GitHub ↗</a></div></footer>
+<script src="/assets/track.js" defer></script>
+<script>window.shareConfig={position:"bottom-right"};</script>
+<script src="/assets/share.js" defer></script>
+</body></html>

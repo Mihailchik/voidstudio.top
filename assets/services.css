@@ -72,3 +72,23 @@
 .other-services.related{padding-bottom:0}
 .other-services.related>div{margin-top:22px}
 .other-services.related .other-service{font-size:clamp(18px,2vw,24px);line-height:1.25}
+
+/* Страницы проектов. Собираются скриптом tools/build_projects.py. */
+.project-hero .kicker a{border-bottom:1px solid currentColor}
+.project-hero .hero-actions{margin-top:0;flex-wrap:wrap}
+.project-closed{font:12px ui-monospace,SFMono-Regular,monospace;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding:13px 0}
+.project-shot{margin:0;padding:60px 5vw 0}
+.project-shot img{width:100%;height:auto;max-height:78vh;object-fit:contain;background:#15161a}
+.project-what{padding:90px 5vw;display:grid;grid-template-columns:200px 1fr;gap:35px}
+.project-what>p:last-child{font-size:clamp(20px,2.2vw,30px);line-height:1.4;letter-spacing:-.02em;max-width:980px}
+.services .stack{border-top:0;padding-top:32px}
+.project-service{margin:90px 5vw 0;padding:36px;background:#e0e4dc}
+.project-service-link{display:inline-block;font-size:clamp(26px,3.4vw,44px);letter-spacing:-.045em;line-height:1.05;margin:16px 0 12px;border-bottom:1px solid currentColor}
+.project-service>p:not(.kicker){color:#626a60;margin-bottom:26px}
+.other-service small{font:11px ui-monospace,SFMono-Regular,monospace;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-left:12px;vertical-align:middle}
+@media(max-width:850px){
+  .project-shot{padding:40px 6% 0}
+  .project-what{padding:60px 6%;grid-template-columns:1fr;gap:16px}
+  .project-service{margin:70px 6% 0;padding:24px}
+  .other-service small{display:block;margin:6px 0 0}
+}
