@@ -30,6 +30,13 @@
 
 Russian versions of the service pages: /websites.html, /apps.html, /automation.html, /ai-visuals.html
 
+## Blog (Russian)
+
+- [Автопостинг в соцсети](https://voidstudio.top/blog/avtoposting-v-socseti.html): scheduled publishing to several platforms, explained through Poster 2.0
+- [Telegram-бот для бизнеса](https://voidstudio.top/blog/telegram-bot-dlya-biznesa.html): what a Telegram bot can do and what its cost depends on
+- [MVP приложения](https://voidstudio.top/blog/mvp-prilozheniya.html): what an app MVP is and how to build the first version
+- [Интерактивный сайт](https://voidstudio.top/blog/interaktivnyj-sajt.html): what an interactive website is, with examples
+
 ## Contacts
 
 - Telegram: https://t.me/voidstudio_lab

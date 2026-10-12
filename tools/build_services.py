@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://voidstudio.top"
 TELEGRAM = "https://t.me/LuchkoOlga"
-CSS_VERSION = 1
+CSS_VERSION = 2
 
 UI = {
     "ru": {
@@ -209,6 +209,16 @@ SERVICES = [
     },
 ]
 
+# Статьи блога по теме услуги. Блог только на русском.
+RELATED = {
+    "websites": [("blog/interaktivnyj-sajt.html", "Интерактивный сайт: что это и примеры")],
+    "apps": [("blog/mvp-prilozheniya.html", "MVP приложения: что это и как сделать первую версию")],
+    "automation": [
+        ("blog/telegram-bot-dlya-biznesa.html", "Telegram-бот для бизнеса: что умеет и от чего зависит цена"),
+        ("blog/avtoposting-v-socseti.html", "Автопостинг в соцсети без ручной работы"),
+    ],
+}
+
 SLUGS = [s["slug"] for s in SERVICES]
 
 
@@ -309,6 +319,14 @@ def render(service, lang):
         for s in SERVICES if s["slug"] != slug
     )
     footer = "".join(f'<a href="{href}">{label}</a>' for href, label in ui["footer"])
+    related = ""
+    if lang == "ru" and RELATED.get(slug):
+        links = "".join(
+            f'<a class="other-service" href="{href}"><span>{e(title)}</span><span aria-hidden="true">→</span></a>'
+            for href, title in RELATED[slug]
+        )
+        related = f'<section class="other-services related"><p class="kicker">Статьи по теме</p><div>{links}</div></section>\n'
+        footer += '<a href="blog/">Блог</a>'
 
     return f"""<!doctype html>
 <html lang="{ui['html_lang']}">
@@ -356,7 +374,7 @@ def render(service, lang):
 <section class="services"><p class="kicker">{ui['includes']}</p><div class="service-grid count-{len(text['items'])}">{items}</div></section>
 {examples}
 <section class="service-process"><p class="kicker">{ui['process_kicker']}</p><h2>{ui['process_title']}</h2><ol>{steps}</ol></section>
-<section class="other-services"><p class="kicker">{ui['other_kicker']}</p><h2>{ui['other_title']}</h2><div>{others}</div></section>
+{related}<section class="other-services"><p class="kicker">{ui['other_kicker']}</p><h2>{ui['other_title']}</h2><div>{others}</div></section>
 <section class="projects-contact"><p class="kicker">{ui['cta_kicker']}</p><h2>{ui['cta_title']}</h2><a href="{TELEGRAM}" target="_blank" rel="noopener">{ui['cta_link']}</a></section>
 </main>
 <footer><span>© 2026 Void Studio . Lab</span><div>{footer}<a href="https://github.com/Mihailchik" target="_blank" rel="noopener">GitHub ↗</a></div></footer>

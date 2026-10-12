@@ -69,3 +69,6 @@
   .other-services{padding:80px 6% 20px}
 }
 @media(max-width:420px){.project-row h3{grid-column:1!important}}
+.other-services.related{padding-bottom:0}
+.other-services.related>div{margin-top:22px}
+.other-services.related .other-service{font-size:clamp(18px,2vw,24px);line-height:1.25}

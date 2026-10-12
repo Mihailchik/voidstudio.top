@@ -1,0 +1,53 @@
+/* Блог. Страницы собираются скриптом tools/build_blog.py. */
+.blog-hero{padding:95px 5vw 85px;border-bottom:1px solid var(--line)}
+.blog-hero h1{font-size:clamp(58px,9vw,132px);font-weight:500;line-height:.9;letter-spacing:-.075em;max-width:1100px;margin:22px 0 32px}
+.blog-hero>p:last-child{font-size:20px;color:var(--muted);max-width:700px}
+
+.post-list{padding:30px 5vw 110px}
+.post-row{display:grid;grid-template-columns:200px 1fr 1fr;gap:35px;padding:40px 0;border-bottom:1px solid var(--line);align-items:start}
+.post-row time{font:12px ui-monospace,SFMono-Regular,monospace;color:var(--muted);padding-top:8px}
+.post-row h2{font-size:clamp(26px,3vw,40px);font-weight:500;letter-spacing:-.045em;line-height:1.08;text-wrap:balance}
+.post-row h2 a{transition:opacity .2s}
+.post-row p{color:var(--muted);line-height:1.7}
+
+.post{padding:80px 5vw 100px;max-width:calc(820px + 10vw);margin:0 auto}
+.post-head .kicker a{border-bottom:1px solid currentColor}
+.post-head h1{font-size:clamp(36px,5vw,64px);font-weight:500;line-height:1.02;letter-spacing:-.05em;margin:22px 0 28px;text-wrap:balance}
+.post-lead{font-size:clamp(18px,1.7vw,22px);line-height:1.5;color:#50564f;padding-bottom:44px;border-bottom:1px solid var(--line)}
+
+.post-body{font-size:18px;line-height:1.7}
+.post-body h2{font-size:clamp(26px,3vw,36px);font-weight:500;letter-spacing:-.04em;line-height:1.12;margin:56px 0 18px}
+.post-body h3{font-size:21px;font-weight:500;letter-spacing:-.02em;line-height:1.25;margin:34px 0 10px}
+.post-body p{margin:0 0 18px}
+.post-body ul,.post-body ol{margin:0 0 22px;padding-left:1.3em}
+.post-body li{margin-bottom:9px}
+.post-body li::marker{color:var(--muted)}
+.post-body strong{font-weight:600}
+.post-body a{border-bottom:1px solid currentColor;transition:opacity .2s}
+
+.post-service{margin-top:64px;padding:32px;background:#e0e4dc}
+.post-service>a:not(.button){display:inline-block;font-size:clamp(24px,3vw,34px);letter-spacing:-.04em;line-height:1.1;margin:14px 0 10px;border-bottom:1px solid currentColor}
+.post-service>p:not(.kicker){color:#626a60;margin-bottom:24px}
+
+.post-more{padding:0 5vw 110px;max-width:calc(820px + 10vw);margin:0 auto}
+.post-more>div{margin-top:22px;border-bottom:1px solid var(--line)}
+.post-link{display:flex;justify-content:space-between;gap:20px;padding:20px 0;border-top:1px solid var(--line);font-size:clamp(18px,2vw,24px);letter-spacing:-.025em;line-height:1.25;transition:opacity .2s}
+.post-link span:last-child{transition:transform .2s}
+
+@media(hover:hover){
+  .post-row h2 a:hover,.post-body a:hover,.post-link:hover{opacity:.6}
+  .post-link:hover span:last-child{transform:translateX(6px)}
+}
+@media(max-width:850px){
+  .blog-hero{padding:60px 6% 70px}
+  .post-list{padding:20px 6% 80px}
+  .post-row{grid-template-columns:1fr;gap:12px;padding:32px 0}
+  .post-row time{padding-top:0}
+  .post{padding:50px 6% 70px}
+  .post-body{font-size:17px}
+  .post-body h2{margin-top:44px}
+  .post-service{padding:24px}
+  .post-more{padding:0 6% 80px}
+  /* На телефоне в шапке остаётся только кнопка связи, поэтому ссылку на блог возвращаем */
+  .site-header nav a[href="/blog/"]{display:inline!important}
+}
