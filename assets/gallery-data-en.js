@@ -17,7 +17,7 @@ const galleryEnglishCopy = {
   109: {title:'The Last Message',category:'Illustration · Video',description:'A message arrives when there is no one left to answer it.',role:'Original work · generation and animation'},
   110: {title:'The Rider and the Fish',category:'Illustration · Video',description:'An adventure illustration built around a deliberately impossible catch.',role:'Original work · generation and animation'},
   111: {title:'Under Sail',category:'Travel · Video',description:'Wind, water and working sails, seen from a moving deck.',role:'Original work · generation and animation'},
-  201: {title:'After Midnight',category:'Street food · Concept',description:'Not simply late-night food, but warmth, closeness and the company worth coming back for.',role:'Original concept · idea, art direction, generation · 2025'},
+  201: {title:'After Midnight',category:'Street food · Concept',description:'Late-night food with warmth, closeness and the company worth coming back for.',role:'Original concept · idea, art direction, generation · 2025'},
   202: {title:'The Passage',category:'Editorial image',description:'The subject moves through a corridor of other people’s attention and expectation.',role:'Original concept · idea, art direction, generation · 2025'},
   203: {title:'Voltage Field',category:'Cover · Concept',description:'Artwork for an electronic release about systems that wake before the city and outlast the people inside it.',role:'Original concept · idea, art direction, generation · 2025'},
   204: {title:'Sea Buckthorn No. 14',category:'Packaging · Concept',description:'A seasonal drink concept combining sea-buckthorn colour, watercolour and Japanese poster graphics.',role:'Original concept · idea, art direction, generation · 2025'},

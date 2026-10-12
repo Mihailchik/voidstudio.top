@@ -17,11 +17,11 @@ TELEGRAM = "https://t.me/LuchkoOlga"
 UI = {
     "ru": {
         "base": "", "locale": "ru_RU", "in_language": "ru-RU",
-        "logo_label": "Void Studio — визуальные работы", "nav_label": "Основная навигация",
+        "logo_label": "Void Studio, визуальные работы", "nav_label": "Основная навигация",
         "nav": [("/", "Работы"), ("/projects.html", "Проекты"), ("/studio.html#about", "О студии")],
         "switch_code": "en", "switch_text": "EN", "switch_label": "Переключить на английский",
         "contact": "Написать ↗", "projects": "Проекты", "what": "Что это", "how": "Как устроено",
-        "stack": "На чём сделано", "service_kicker": "Сделаем похожее", "service_text": "Расскажите о задаче — предложим решение.",
+        "stack": "На чём сделано", "service_kicker": "Сделаем похожее", "service_text": "Расскажите о задаче, и мы предложим решение.",
         "telegram": "Написать в Telegram ↗", "other_kicker": "Другие проекты", "other_title": "Что ещё мы сделали.",
         "article": "Статья по теме", "closed": "Закрытый проект",
         "footer": [("/studio.html", "О студии"), ("/projects.html", "Проекты"), ("/blog/", "Блог")],
@@ -30,7 +30,7 @@ UI = {
     },
     "en": {
         "base": "/en", "locale": "en_US", "in_language": "en",
-        "logo_label": "Void Studio — visual work", "nav_label": "Main navigation",
+        "logo_label": "Void Studio, visual work", "nav_label": "Main navigation",
         "nav": [("/en/", "Work"), ("/en/projects.html", "Projects"), ("/en/studio.html#about", "Studio")],
         "switch_code": "ru", "switch_text": "RU", "switch_label": "Switch to Russian",
         "contact": "Contact ↗", "projects": "Projects", "what": "What it is", "how": "How it works",
@@ -50,7 +50,7 @@ PROJECTS = [
         "article": {"ru": ("/blog/interaktivnyj-sajt.html", "Интерактивный сайт: что это и примеры"), "en": ("/en/blog/interactive-website.html", "Interactive websites: what they are, with examples")},
         "ru": {
             "name": "Surf", "kind": "Веб-сервис",
-            "title": "Surf — прогноз волн для серфинга на Пхукете",
+            "title": "Surf: прогноз волн для серфинга на Пхукете",
             "description": "Surf показывает волну, ветер, прилив и камеры пляжей Пхукета и ставит каждому пляжу оценку от 0 до 10. Как устроен сервис и на чём он сделан.",
             "tagline": "Стоит ли ехать на серфинг прямо сейчас?",
             "what": "Чтобы понять, есть ли сегодня волна, приходится открывать несколько погодных сайтов и сравнивать графики. Surf отвечает на один вопрос: стоит ли ехать сейчас и на какой пляж. Волна, ветер, прилив и камеры пляжей Пхукета и Као Лака собраны на одной странице.",
@@ -65,7 +65,7 @@ PROJECTS = [
         },
         "en": {
             "name": "Surf", "kind": "Web service",
-            "title": "Surf — a surf forecast for Phuket",
+            "title": "Surf: a surf forecast for Phuket",
             "description": "Surf shows waves, wind, tide and beach cameras for Phuket and scores every beach from 0 to 10. How the service works and what it is built with.",
             "tagline": "Is it worth going surfing right now?",
             "what": "To know whether there are waves today you have to open several weather sites and compare charts. Surf answers one question: is it worth going now, and to which beach. Waves, wind, tide and beach cameras for Phuket and Khao Lak sit on one page.",
@@ -86,25 +86,25 @@ PROJECTS = [
         "article": {"ru": ("/blog/interaktivnyj-sajt.html", "Интерактивный сайт: что это и примеры"), "en": ("/en/blog/interactive-website.html", "Interactive websites: what they are, with examples")},
         "ru": {
             "name": "Inkfall", "kind": "Интерактивная графика",
-            "title": "Inkfall — симуляция чернил в воде в браузере",
-            "description": "Inkfall — симуляция жидкости на WebGL: чернила в воде, которыми управляют мышью, пальцами, жестами рук и голосом. Как это устроено.",
+            "title": "Inkfall: симуляция чернил в воде в браузере",
+            "description": "Inkfall показывает чернила в воде, которыми управляют мышью, пальцами, жестами рук и голосом. Это симуляция жидкости на WebGL. Как она устроена.",
             "tagline": "Чернила в воде: мышью, пальцем, рукой или голосом.",
-            "what": "Inkfall — это вода, в которой расходятся чернила. Это не видео и не эффект из частиц: каждый кадр видеокарта решает уравнения движения жидкости. Чернила уносит поток, поток закручивается в вихри, тяжёлые чернила тонут, лёгкие поднимаются.",
+            "what": "Inkfall показывает воду, в которой расходятся чернила. Каждый кадр видеокарта заново решает уравнения движения жидкости, готового видео здесь нет. Чернила уносит поток, поток закручивается в вихри, тяжёлые чернила тонут, лёгкие поднимаются.",
             "how": [
                 ("Шесть характеров", "Чернила, шёлк, дым, масло, акварель и пыльца. Каждый меняет сразу несколько свойств жидкости: от тяжёлого масла до лёгкого дыма."),
                 ("Управление руками", "Жесты перед камерой: щепоть рисует, открытая ладонь перемешивает воду, сжатый кулак очищает её. Изображение с камеры обрабатывается на устройстве и никуда не отправляется."),
                 ("Голос и музыка", "С включённым микрофоном кистью управляет звук: чем громче, тем быстрее она движется и тем больше чернил оставляет."),
                 ("Фото и видео", "Кадр сохраняется в PNG, видео записывается в качестве до 4K. Интерфейс в запись не попадает."),
-                ("Один файл", "Вся работа — одна HTML-страница без сборки и без фреймворков. Устанавливать ничего не нужно."),
+                ("Один файл", "Вся работа помещается в одну HTML-страницу без сборки и без фреймворков. Устанавливать ничего не нужно."),
             ],
             "links": [("Открыть Inkfall ↗", "https://inkfall.voidstudio.top"), ("Код на GitHub ↗", "https://github.com/Mihailchik/inkfall")],
         },
         "en": {
             "name": "Inkfall", "kind": "Interactive graphic",
-            "title": "Inkfall — an ink-in-water simulation in the browser",
+            "title": "Inkfall: an ink-in-water simulation in the browser",
             "description": "Inkfall is a WebGL fluid simulation: ink in water driven by mouse, touch, hand gestures and voice. How it works.",
             "tagline": "Ink in water: mouse, finger, hand or voice.",
-            "what": "Inkfall is water with ink blooming through it. It is not a video and not a particle effect: every frame the GPU solves the equations of fluid motion. The ink is carried by the flow, the flow curls into vortices, heavy ink sinks and light ink rises.",
+            "what": "Inkfall shows water with ink blooming through it. Every frame the GPU solves the equations of fluid motion again, and there is no pre-made video. The ink is carried by the flow, the flow curls into vortices, heavy ink sinks and light ink rises.",
             "how": [
                 ("Six modes", "Ink, silk, smoke, oil, watercolour and pollen. Each changes several properties of the fluid at once, from heavy oil to light smoke."),
                 ("Hand control", "Gestures in front of the camera: a pinch paints, an open palm stirs the water, a held fist clears it. The camera image is processed on the device and never uploaded."),
@@ -122,10 +122,10 @@ PROJECTS = [
         "article": {"ru": ("/blog/interaktivnyj-sajt.html", "Интерактивный сайт: что это и примеры"), "en": ("/en/blog/interactive-website.html", "Interactive websites: what they are, with examples")},
         "ru": {
             "name": "Глазомер", "kind": "Браузерная игра",
-            "title": "Глазомер — ежедневная браузерная игра на точность глаза",
-            "description": "«Глазомер» — браузерная игра: пять заданий на глаз и одна попытка в день. Задания одинаковые у всех, результат можно сравнить. Как она устроена.",
+            "title": "Глазомер: ежедневная браузерная игра на точность глаза",
+            "description": "В браузерной игре «Глазомер» пять заданий на глаз и одна попытка в день. Задания одинаковые у всех, результат можно сравнить. Как она устроена.",
             "tagline": "Пять заданий на глаз. Одна попытка в день.",
-            "what": "«Глазомер» — ежедневная мини-игра, которая проверяет, насколько точен ваш глаз. Линейку нужно убрать. Игра открывается по ссылке и занимает пару минут.",
+            "what": "«Глазомер» проверяет, насколько точен ваш глаз. Это ежедневная мини-игра. Линейку нужно убрать. Игра открывается по ссылке и занимает пару минут.",
             "how": [
                 ("Пять заданий", "Остановить таймер вслепую, отметить долю отрезка, выставить угол, найти центр круга и оценить число точек."),
                 ("Одинаково для всех", "Набор заданий каждый день новый и одинаковый у всех игроков, поэтому результат есть с кем сравнить."),
@@ -136,7 +136,7 @@ PROJECTS = [
         },
         "en": {
             "name": "Eyeball", "kind": "Browser game",
-            "title": "Eyeball — a daily browser game about judging by eye",
+            "title": "Eyeball: a daily browser game about judging by eye",
             "description": "Eyeball is a browser game: five tasks done by eye and one attempt a day. Everyone gets the same set, so scores can be compared. How it works.",
             "tagline": "Five tasks done by eye. One attempt a day.",
             "what": "Eyeball is a daily mini-game that tests how accurate your eye is. Put the ruler away. The game opens from a link and takes a couple of minutes.",
@@ -156,10 +156,10 @@ PROJECTS = [
         "article": {"ru": ("/blog/mvp-prilozheniya.html", "MVP приложения: что это и как сделать первую версию"), "en": ("/en/blog/app-mvp.html", "An app MVP: what it is and how to build the first version")},
         "ru": {
             "name": "Argyns", "kind": "Приложение для iOS и Android",
-            "title": "Argyns — приложение-реестр двенадцати родов Аргын",
-            "description": "Argyns — мобильное приложение на Flutter и Firebase: общая база, статистика родов и уведомления о съездах. Опубликовано в App Store и Google Play.",
+            "title": "Argyns: приложение-реестр двенадцати родов Аргын",
+            "description": "Мобильное приложение Argyns сделано на Flutter и Firebase. В нём общая база, статистика родов и уведомления о съездах. Опубликовано в App Store и Google Play.",
             "tagline": "Цифровой реестр двенадцати родов Аргын.",
-            "what": "Argyns — цифровой реестр двенадцати родов Аргын. Приложение объединяет потомков и помогает сохранить историю рода. Оно опубликовано в App Store и Google Play.",
+            "what": "Argyns ведёт цифровой реестр двенадцати родов Аргын. Приложение объединяет потомков и помогает сохранить историю рода. Оно опубликовано в App Store и Google Play.",
             "how": [
                 ("Единая база", "Общая база с актуальной статистикой представителей родов."),
                 ("Счётчик рода", "Численность каждого рода видна наглядно."),
@@ -171,7 +171,7 @@ PROJECTS = [
         },
         "en": {
             "name": "Argyns", "kind": "iOS and Android app",
-            "title": "Argyns — a registry app for the twelve Argyn clans",
+            "title": "Argyns: a registry app for the twelve Argyn clans",
             "description": "Argyns is a mobile app built with Flutter and Firebase: a shared database, clan statistics and gathering announcements. Available on the App Store and Google Play.",
             "tagline": "A digital registry for the twelve Argyn clans.",
             "what": "Argyns is a digital registry for the twelve Argyn clans. The app brings descendants together and helps keep the history of the clan. It is available on the App Store and Google Play.",
@@ -192,10 +192,10 @@ PROJECTS = [
         "article": {"ru": ("/blog/mvp-prilozheniya.html", "MVP приложения: что это и как сделать первую версию"), "en": ("/en/blog/app-mvp.html", "An app MVP: what it is and how to build the first version")},
         "ru": {
             "name": "FitTimer", "kind": "Мобильное приложение",
-            "title": "FitTimer — таймер интервальных тренировок для iPhone и iPad",
-            "description": "FitTimer — таймер для Tabata, HIIT, EMOM, AMRAP и своих круговых тренировок. Без регистрации, рекламы и сбора данных. Как устроено приложение.",
+            "title": "FitTimer: таймер интервальных тренировок для iPhone и iPad",
+            "description": "Таймер FitTimer подходит для Tabata, HIIT, EMOM, AMRAP и своих круговых тренировок. Без регистрации, рекламы и сбора данных. Как устроено приложение.",
             "tagline": "Интервальный таймер, с которым можно не смотреть в телефон.",
-            "what": "FitTimer — таймер интервальных тренировок для iPhone и iPad: Tabata, HIIT, EMOM, AMRAP и собственные круговые тренировки. Приложение опубликовано в App Store.",
+            "what": "FitTimer помогает вести интервальные тренировки на iPhone и iPad: Tabata, HIIT, EMOM, AMRAP и собственные круговые. Приложение опубликовано в App Store.",
             "how": [
                 ("Быстрый старт", "Три колеса: работа, отдых, раунды. Тренировка запускается за несколько секунд."),
                 ("Шаблоны", "Tabata, EMOM, AMRAP и HIIT можно запустить как есть или сохранить и изменить."),
@@ -209,7 +209,7 @@ PROJECTS = [
         },
         "en": {
             "name": "FitTimer", "kind": "Mobile app",
-            "title": "FitTimer — an interval training timer for iPhone and iPad",
+            "title": "FitTimer: an interval training timer for iPhone and iPad",
             "description": "FitTimer is a timer for Tabata, HIIT, EMOM, AMRAP and your own circuits. No account, no ads, no tracking. How the app works.",
             "tagline": "An interval timer that lets you keep your eyes off the phone.",
             "what": "FitTimer is an interval training timer for iPhone and iPad: Tabata, HIIT, EMOM, AMRAP and your own circuits. The app is available on the App Store.",
@@ -231,7 +231,7 @@ PROJECTS = [
         "article": {"ru": ("/blog/avtoposting-v-socseti.html", "Автопостинг в соцсети без ручной работы"), "en": ("/en/blog/scheduled-social-posting.html", "Scheduled social posting without manual work")},
         "ru": {
             "name": "Poster 2.0", "kind": "Автоматизация",
-            "title": "Poster 2.0 — система автопостинга для нескольких площадок",
+            "title": "Poster 2.0: система автопостинга для нескольких площадок",
             "description": "Poster 2.0 готовит один выпуск для Telegram, Instagram, YouTube и Pikabu, проверяет файлы и публикует по расписанию. Как устроена система.",
             "tagline": "Один выпуск для нескольких площадок.",
             "what": "Poster 2.0 хранит идеи и материалы, собирает форматы для Telegram, Instagram, YouTube и Pikabu, проверяет файлы, планирует публикации и записывает результат. На этой системе работает контент Void Studio.",
@@ -246,7 +246,7 @@ PROJECTS = [
         },
         "en": {
             "name": "Poster 2.0", "kind": "Automation",
-            "title": "Poster 2.0 — a scheduled publishing system for several platforms",
+            "title": "Poster 2.0: a scheduled publishing system for several platforms",
             "description": "Poster 2.0 prepares one release for Telegram, Instagram, YouTube and Pikabu, validates files and publishes on a schedule. How the system works.",
             "tagline": "One release for several platforms.",
             "what": "Poster 2.0 stores ideas and media, prepares formats for Telegram, Instagram, YouTube and Pikabu, validates files, schedules publications and records the result. It runs the Void Studio content workflow.",
@@ -266,7 +266,7 @@ PROJECTS = [
         "article": {"ru": ("/blog/telegram-bot-dlya-biznesa.html", "Telegram-бот для бизнеса: что умеет и от чего зависит цена"), "en": ("/en/blog/telegram-bot-for-business.html", "A Telegram bot for business: what it can do and what the cost depends on")},
         "ru": {
             "name": "Podcast Bot", "kind": "Telegram-бот",
-            "title": "Podcast Bot — Telegram-бот, который собирает подкасты в один канал",
+            "title": "Podcast Bot: Telegram-бот, который собирает подкасты в один канал",
             "description": "Podcast Bot следит за RSS, YouTube и Telegram, скачивает новые выпуски, переводит звук в MP3 и отправляет в канал. Как устроен бот.",
             "tagline": "Подкасты из разных источников в одном канале.",
             "what": "Podcast Bot собирает подкасты из разных мест в один Telegram-канал. Он сам следит за источниками, скачивает новые выпуски и присылает их в удобном для прослушивания виде.",
@@ -281,7 +281,7 @@ PROJECTS = [
         },
         "en": {
             "name": "Podcast Bot", "kind": "Telegram bot",
-            "title": "Podcast Bot — a Telegram bot that gathers podcasts into one channel",
+            "title": "Podcast Bot: a Telegram bot that gathers podcasts into one channel",
             "description": "Podcast Bot watches RSS, YouTube and Telegram, downloads new episodes, converts audio to MP3 and sends it to a channel. How the bot works.",
             "tagline": "Podcasts from different sources in one channel.",
             "what": "Podcast Bot gathers podcasts from different places into one Telegram channel. It watches the sources by itself, downloads new episodes and sends them in a form that is easy to listen to.",
@@ -360,7 +360,7 @@ def render(project, lang):
         for i, (label, href) in enumerate(text["links"])
     ) or f'<span class="project-closed">{ui["closed"]}</span>'
     shot = (
-        f'<figure class="project-shot"><img src="{image[0]}" alt="{e(text["name"])} — {e(text["kind"].lower())}" width="{image[1]}" height="{image[2]}" fetchpriority="high"></figure>'
+        f'<figure class="project-shot"><img src="{image[0]}" alt="{e(text["name"])}, {e(text["kind"].lower())}" width="{image[1]}" height="{image[2]}" fetchpriority="high"></figure>'
         if image else ""
     )
     cards = "".join(
@@ -385,7 +385,7 @@ def render(project, lang):
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-E9G3NGMQ6F"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments)}}gtag('js',new Date());gtag('config','G-E9G3NGMQ6F');</script>
 <meta name="theme-color" content="#f4f4f0">
-<title>{e(text['title'])} — Void Studio</title>
+<title>{e(text['title'])} | Void Studio</title>
 <meta name="description" content="{e(text['description'])}">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <link rel="canonical" href="{url}">
@@ -403,7 +403,7 @@ def render(project, lang):
 <link rel="icon" href="/assets/img/favicon-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/site.css?v=9">
-<link rel="stylesheet" href="/assets/services.css?v=3">
+<link rel="stylesheet" href="/assets/services.css?v=4">
 <script type="application/ld+json">
 {json.dumps(ld, ensure_ascii=False, indent=2)}
 </script>

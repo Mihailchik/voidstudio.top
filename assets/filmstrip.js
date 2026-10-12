@@ -179,7 +179,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     const frame = frames[frameIndex];
     if (!frame) return;
     frameIndexes[workIndex] = frameIndex;
-    images[workIndex].alt = `${works[workIndex].title} — ${frame.label}`;
+    images[workIndex].alt = `${works[workIndex].title}, ${frame.label}`;
     images[workIndex].src = frame.src;
     frameRail.querySelectorAll('button').forEach((button, index) => {
       button.setAttribute('aria-current', String(index === frameIndex));

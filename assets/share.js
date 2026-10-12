@@ -36,7 +36,7 @@
           hint: 'Для Instagram и YouTube скопируйте ссылку: вставить её можно в сторис или описание.' },
     en: { open: 'Share', heading: 'Share', cancel: 'Cancel',
           copy: 'Copy link', copied: 'Link copied',
-          hint: 'Instagram and YouTube take no share links — copy the link and paste it into a story or a description.' },
+          hint: 'Instagram and YouTube take no share links. Copy the link and paste it into a story or a description.' },
   }[lang];
 
   // Площадки, у которых есть веб-адрес для публикации. Instagram и YouTube

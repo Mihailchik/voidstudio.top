@@ -13,12 +13,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://voidstudio.top"
 TELEGRAM = "https://t.me/LuchkoOlga"
-CSS_VERSION = 3
+CSS_VERSION = 4
 
 UI = {
     "ru": {
         "html_lang": "ru", "locale": "ru_RU", "in_language": "ru-RU", "prefix": "",
-        "logo_label": "Void Studio — визуальные работы", "nav_label": "Основная навигация",
+        "logo_label": "Void Studio, визуальные работы", "nav_label": "Основная навигация",
         "nav": [("/", "Работы"), ("projects.html", "Проекты"), ("studio.html#about", "О студии")],
         "switch_code": "en", "switch_text": "EN", "switch_label": "Переключить на английский",
         "contact": "Написать ↗", "kicker": "Услуги", "includes": "Что входит",
@@ -32,14 +32,14 @@ UI = {
         "process_title": "От разговора до запуска.",
         "process": [
             ("Разбираемся в задаче", "Вы рассказываете, что нужно и для кого. Мы задаём вопросы и предлагаем решение."),
-            ("Показываем рабочую версию", "Не картинку, а то, что можно открыть и попробовать. На ней видно, что стоит поменять."),
+            ("Показываем рабочую версию", "Её можно открыть и попробовать. На ней видно, что стоит поменять."),
             ("Доводим и проверяем", "Дописываем, проверяем на телефонах и компьютерах, правим по вашим замечаниям."),
             ("Запускаем", "Выкладываем результат и остаёмся на связи после запуска."),
         ],
     },
     "en": {
         "html_lang": "en", "locale": "en_US", "in_language": "en", "prefix": "en/",
-        "logo_label": "Void Studio — visual work", "nav_label": "Main navigation",
+        "logo_label": "Void Studio, visual work", "nav_label": "Main navigation",
         "nav": [("./", "Work"), ("projects.html", "Projects"), ("studio.html#about", "Studio")],
         "switch_code": "ru", "switch_text": "RU", "switch_label": "Switch to Russian",
         "contact": "Contact ↗", "kicker": "Services", "includes": "What is included",
@@ -53,7 +53,7 @@ UI = {
         "process_title": "From the first talk to launch.",
         "process": [
             ("We learn the task", "You tell us what you need and who it is for. We ask questions and suggest a solution."),
-            ("We show a working version", "Not a picture but something you can open and try. It shows what is worth changing."),
+            ("We show a working version", "You can open it and try it. It shows what is worth changing."),
             ("We finish and test", "We complete the work, test it on phones and computers, and fix what you point out."),
             ("We launch", "We publish the result and stay in touch after launch."),
         ],
@@ -85,24 +85,24 @@ SERVICES = [
         "stack": "Vanilla JS · WebGL2 · GLSL · SVG · Vercel · GitHub Pages",
         "ru": {
             "name": "Сайты и интерактив", "service_type": "Разработка сайтов",
-            "title": "Разработка сайтов и интерактивных проектов — Void Studio",
+            "title": "Разработка сайтов и интерактивных проектов | Void Studio",
             "description": "Void Studio делает лендинги, портфолио, веб-сервисы, браузерные игры и интерактивную графику на WebGL. От идеи до рабочего сайта.",
             "h1": "Разработка сайтов и интерактивных проектов.",
-            "lead": "Лендинг, портфолио, веб-сервис или страница с необычной механикой. Проектируем, программируем и запускаем.",
+            "lead": "Лендинг, портфолио, веб-сервис или страница с необычной механикой. Делаем от идеи до запуска.",
             "items": [
                 ("Лендинг или портфолио", "Быстрая страница, которая понятно объясняет, что вы делаете, и хорошо выглядит на телефоне."),
                 ("Веб-сервис", "Страница, которая собирает данные и даёт человеку готовый ответ. Так устроен наш прогноз для серфинга Surf."),
-                ("Интерактивная графика", "Графика в браузере, которая отвечает на мышь, касание, жесты и звук. Пример — Inkfall."),
-                ("Браузерная игра", "Небольшая игра, которая открывается по ссылке без установки и регистрации. Пример — «Глазомер»."),
+                ("Интерактивная графика", "Графика в браузере, которая отвечает на мышь, касание, жесты и звук. Так сделан Inkfall."),
+                ("Браузерная игра", "Небольшая игра, которая открывается по ссылке без установки и регистрации. Так сделан «Глазомер»."),
             ],
             "examples_title": "Сайты, которые можно открыть прямо сейчас.",
         },
         "en": {
             "name": "Websites and interactive work", "service_type": "Website development",
-            "title": "Website and interactive development — Void Studio",
+            "title": "Website and interactive development | Void Studio",
             "description": "Void Studio builds landing pages, portfolios, web services, browser games and interactive WebGL graphics. From an idea to a working site.",
             "h1": "Websites and interactive projects.",
-            "lead": "A landing page, a portfolio, a web service or a page with an unusual mechanic. We design, code and launch.",
+            "lead": "A landing page, a portfolio, a web service or a page with an unusual mechanic. We take it from an idea to launch.",
             "items": [
                 ("Landing page or portfolio", "A fast page that explains what you do and looks good on a phone."),
                 ("Web service", "A page that gathers data and gives a person a ready answer. Our surf forecast, Surf, works this way."),
@@ -118,7 +118,7 @@ SERVICES = [
         "stack": "Flutter · Dart · Firebase · iOS · Android",
         "ru": {
             "name": "Приложения и прототипы", "service_type": "Разработка мобильных приложений",
-            "title": "Разработка мобильных приложений и прототипов — Void Studio",
+            "title": "Разработка мобильных приложений и прототипов | Void Studio",
             "description": "Void Studio делает приложения для iOS и Android на Flutter и рабочие прототипы продукта. Публикуем в App Store и Google Play.",
             "h1": "Мобильные приложения и прототипы продукта.",
             "lead": "Приложения для iOS и Android на Flutter и рабочие прототипы, на которых можно проверить идею до больших вложений.",
@@ -131,7 +131,7 @@ SERVICES = [
         },
         "en": {
             "name": "Apps and prototypes", "service_type": "Mobile app development",
-            "title": "Mobile app and prototype development — Void Studio",
+            "title": "Mobile app and prototype development | Void Studio",
             "description": "Void Studio builds iOS and Android apps with Flutter and working product prototypes. We publish to the App Store and Google Play.",
             "h1": "Mobile apps and product prototypes.",
             "lead": "iOS and Android apps built with Flutter, and working prototypes that let you test an idea before a large investment.",
@@ -149,10 +149,10 @@ SERVICES = [
         "stack": "Python · aiogram · SQLite · Docker · ffmpeg · Telegram API",
         "ru": {
             "name": "Боты и автоматизация", "service_type": "Разработка Telegram-ботов и автоматизация",
-            "title": "Разработка Telegram-ботов и автоматизация — Void Studio",
+            "title": "Разработка Telegram-ботов и автоматизация | Void Studio",
             "description": "Void Studio делает Telegram-ботов и системы, которые забирают ручную работу: сбор материалов, обработка файлов, публикация по расписанию.",
             "h1": "Telegram-боты и автоматизация рутины.",
-            "lead": "Бот или система, которая заберёт повторяющуюся ручную работу: собрать, обработать, опубликовать, записать результат.",
+            "lead": "Бот или система, которая заберёт повторяющуюся ручную работу: сбор материалов, обработку файлов и публикацию.",
             "items": [
                 ("Telegram-бот", "Бот, который принимает запросы, следит за источниками и присылает готовый результат в чат или канал."),
                 ("Публикация по расписанию", "Один материал расходится по нескольким площадкам в нужных форматах. Так работает наш Poster 2.0."),
@@ -162,10 +162,10 @@ SERVICES = [
         },
         "en": {
             "name": "Bots and automation", "service_type": "Telegram bot development and automation",
-            "title": "Telegram bots and automation — Void Studio",
+            "title": "Telegram bots and automation | Void Studio",
             "description": "Void Studio builds Telegram bots and systems that take over manual work: collecting material, processing files and publishing on a schedule.",
             "h1": "Telegram bots and automation.",
-            "lead": "A bot or a system that takes repetitive manual work off your hands: collect, process, publish and record the result.",
+            "lead": "A bot or a system that takes repetitive manual work off your hands: collecting material, processing files and publishing.",
             "items": [
                 ("Telegram bot", "A bot that takes requests, watches sources and sends a finished result to a chat or a channel."),
                 ("Scheduled publishing", "One piece of content goes to several platforms in the right formats. Our Poster 2.0 works this way."),
@@ -180,12 +180,12 @@ SERVICES = [
         "stack": "",
         "ru": {
             "name": "AI-изображения и видео", "service_type": "Создание AI-изображений и видео",
-            "title": "AI-изображения и видео: реклама, постеры, иллюстрации — Void Studio",
+            "title": "AI-изображения и видео: реклама, постеры, иллюстрации | Void Studio",
             "description": "Void Studio создаёт изображения и короткие видео с помощью нейросетей: рекламные кадры еды и продуктов, постеры, иллюстрации и серии для соцсетей.",
             "h1": "AI-изображения и видео.",
             "lead": "Изображения и короткие видео, сделанные с помощью нейросетей: рекламные кадры, постеры, иллюстрации и серии для соцсетей.",
             "items": [
-                ("Рекламные кадры", "Еда и продукты крупным планом: фактура, свет и настроение без съёмочной площадки."),
+                ("Рекламные кадры", "Еда и продукты крупным планом. Съёмочная площадка для таких кадров не нужна."),
                 ("Постеры и иллюстрации", "Отдельные изображения и серии в одном стиле для сайта, обложек и публикаций."),
                 ("Короткие видео", "Ролики для Instagram, Telegram и YouTube. Готовые работы публикуем в своих каналах."),
             ],
@@ -194,12 +194,12 @@ SERVICES = [
         },
         "en": {
             "name": "AI images and video", "service_type": "AI image and video production",
-            "title": "AI images and video: ads, posters, illustration — Void Studio",
+            "title": "AI images and video: ads, posters, illustration | Void Studio",
             "description": "Void Studio creates images and short videos with generative AI: food and product shots, posters, illustration and series for social media.",
             "h1": "AI images and video.",
             "lead": "Images and short videos made with generative AI: advertising shots, posters, illustration and series for social media.",
             "items": [
-                ("Advertising shots", "Food and products up close: texture, light and mood without a film set."),
+                ("Advertising shots", "Food and products up close. No film set is needed for such shots."),
                 ("Posters and illustration", "Single images and series in one style for a site, covers and posts."),
                 ("Short videos", "Clips for Instagram, Telegram and YouTube. We publish finished work in our own channels."),
             ],
