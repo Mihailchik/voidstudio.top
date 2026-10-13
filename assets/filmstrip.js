@@ -282,7 +282,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     frameRail.inert = !value;
     projectCopy.setAttribute('aria-hidden', String(!value));
     hoverGoal = 0;
-    resetFit();
+    resetFit(Boolean(value));
     if (!value) {
       syncVideoPlayback(-1);
       syncSoundControl(-1);
@@ -304,15 +304,20 @@ function createFilmstrip(works, { reduced = false } = {}) {
   function close() { if (expandTo) changeScale(0); }
   function goTo(index) {
     target = clamp(index, 0, works.length - 1);
-    resetFit();
+    resetFit(Boolean(expandTo));
     wake();
   }
-  function resetFit() {
-    fitGoal = 0;
-    section.dataset.fit = 'crop';
+  // В ленте кадр заполняет карточку целиком, в раскрытом виде работа
+  // показывается полностью: обрезать её по краям там незачем, а у высоких
+  // кадров так терялась половина картинки.
+  function resetFit(expanded) {
+    fitGoal = expanded ? 1 : 0;
+    section.dataset.fit = expanded ? 'full' : 'crop';
     if (fitButton) {
-      fitButton.setAttribute('aria-pressed', 'false');
-      fitButton.innerHTML = `${copy.examine} <span>+</span>`;
+      fitButton.setAttribute('aria-pressed', String(Boolean(expanded)));
+      fitButton.innerHTML = expanded
+        ? `${copy.restore} <span>−</span>`
+        : `${copy.examine} <span>+</span>`;
     }
   }
   function toggleFit() {
@@ -398,7 +403,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     const delta = raw * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? width : 1);
     const layout = dimensions();
     target = clamp(target + delta * (expandTo ? 1.15 : .14) / (layout.w + layout.gap), 0, works.length - 1);
-    resetFit();
+    resetFit(Boolean(expandTo));
     clearTimeout(wheelTimer);
     if (expandTo) wheelTimer = setTimeout(() => { target = Math.round(target); wake(); }, 160);
     wake();
@@ -443,7 +448,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
       const fling = reduced || event.type === 'pointercancel' ? 0 : clamp(freshVelocity * 120 / (layout.w + layout.gap), -2.8, 2.8);
       target = clamp(target - fling, 0, works.length - 1);
       if (expandTo) target = Math.round(target);
-      resetFit();
+      resetFit(Boolean(expandTo));
     }
     drag = null;
     stage.classList.remove('dragging');

@@ -1,7 +1,6 @@
 // Local editorial selection. Titles come from the Void Studio library.
 // Category labels are proposed website navigation, not original series names.
 const galleryWorks = [
-  {id:300,kind:'video',src:'assets/gallery/surf-showreel.mp4',poster:'assets/gallery/surf-showreel-poster.webp',title:'Surf: видеовизитка',category:'Проект · Видео',description:'Пятнадцать секунд про сервис прогноза волн: настоящий интерфейс, архив прогноза за 11 октября, нарисованный океан вокруг и музыка, написанная для ролика.',role:'Работа студии · анимация и монтаж · 2026',url:'https://surf.voidstudio.top',urlLabel:'Открыть Surf',color:'#0b7fc7',detailBackground:'#eef3f8',detailInk:'#0f1b2d',accent:'#0b7fc7'},
   {id:59,src:'assets/gallery/summer-coast.webp',title:'Летний берег',category:'Пейзаж · Исследование',description:'Летний берег без фотографической точности: свободный мазок, лёгкий воздух и несколько ярких цветовых акцентов.',role:'Авторская работа · генерация',color:'#747d72',detailBackground:'#ece7dc',detailInk:'#23352d',accent:'#607b70'},
   {id:29,src:'assets/gallery/golden-field-bird.webp',title:'Птица золотого поля',category:'Живописный эксперимент',description:'Птица в золотом поле у колючей проволоки: живое встречается с искусственной границей.',role:'Опубликованная работа · генерация · 2026',url:'https://t.me/voidstudio_lab/542',urlLabel:'Смотреть публикацию',color:'#635d3e'},
   {id:32,src:'assets/gallery/rose-of-memory.webp',title:'Роза памяти',category:'Визуальный образ',description:'Один цвет остаётся живым в холодном пространстве памяти.',role:'Опубликованная работа · генерация · 2026',url:'https://t.me/voidstudio_lab/536',urlLabel:'Смотреть публикацию',color:'#664247'},
@@ -44,7 +43,7 @@ const galleryWorks = [
   {id:211,kind:'video',hasAudio:true,src:'assets/gallery/void-cat-signal.mp4',poster:'assets/gallery/void-cat-signal-poster.webp',title:'Сигнал из пустоты',category:'Айдентика · Видео',description:'Живой знак Void Studio: кот ловит сигнал, который обычно остаётся за кадром.',role:'Фирменная анимация · генерация, монтаж и музыка · 2026',color:'#d8849e',detailBackground:'#18211f',detailInk:'#e9d7dd',accent:'#ef9fba'},
   {id:212,kind:'video',src:'assets/gallery/void-cat-line.mp4',poster:'assets/gallery/void-cat-line-poster.webp',title:'Кот в наушнике',category:'Айдентика · Рисованное видео',description:'Рисованный образ кота в наушнике: линия оживает в коротком цикле движения взгляда.',role:'Рисованное видео · 2026',color:'#323332',detailBackground:'#f4f3ee',detailInk:'#171917',accent:'#171917'}
 ];
-const suggestedGalleryIds = [300,63,201,205,211,212,38,204,37,206,29,104,101,210,207,203,208,1,111,103,202,32,209,107,108,110,109,105,106];
+const suggestedGalleryIds = [63,201,205,211,212,38,204,37,206,29,104,101,210,207,203,208,1,111,103,202,32,209,107,108,110,109,105,106];
 function selectedGalleryIds() {
   const raw = new URL(location.href).searchParams.get('works');
   if (raw === null) return [...suggestedGalleryIds];
