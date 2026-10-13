@@ -223,7 +223,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     projectDescription.textContent = work.description || '';
     projectRole.textContent = work.role || '';
     projectLink.href = work.url || '#';
-    projectLink.textContent = work.urlLabel ? `${work.urlLabel} ↗` : `${copy.publication} ↗`;
+    projectLink.textContent = work.urlLabel ? `${work.urlLabel} ↗︎` : `${copy.publication} ↗︎`;
     projectLink.hidden = !work.url;
     projectCopy.hidden = !work.description && !work.role && !work.url;
     renderFrameRail(index);
