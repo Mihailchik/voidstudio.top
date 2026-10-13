@@ -25,3 +25,4 @@
 .contact-button:active,.section-head>a:active,.about-text a:active,.project-links a:active,.projects-contact a:active,footer a:active,.site-logo:active{opacity:.4}
 .proof a{border-bottom:1px solid var(--line);transition:border-color .2s}
 @media(hover:hover){.proof a:hover{border-color:currentColor}.service h3 a:hover{opacity:.6}}
+.project-reel{padding:0 5vw 10px}.project-reel figure{margin:0;max-width:1100px}.project-reel video{display:block;width:100%;height:auto;aspect-ratio:16/9;border-radius:14px;background:#0f1b2d}.project-reel figcaption{margin-top:12px;font-size:13.5px;line-height:1.5;color:var(--muted);max-width:70ch}@media(max-width:850px){.project-reel{padding:0 6% 6px}.project-reel video{border-radius:10px}}

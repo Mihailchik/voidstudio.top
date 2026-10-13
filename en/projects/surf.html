@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/img/favicon-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/site.css?v=9">
+<link rel="stylesheet" href="/assets/site.css?v=10">
 <link rel="stylesheet" href="/assets/services.css?v=4">
 <script type="application/ld+json">
 {
@@ -75,6 +75,11 @@
 <body><header class="site-header"><a class="site-logo" href="/en/" aria-label="Void Studio, visual work"></a><nav aria-label="Main navigation"><a href="/en/">Work</a><a href="/en/projects.html">Projects</a><a href="/en/studio.html#about">Studio</a><a class="nav-language" href="/projects/surf.html" lang="ru" hreflang="ru" aria-label="Switch to Russian">RU</a><a class="nav-contact" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Contact ↗︎</a></nav></header>
 <main>
 <section class="service-hero project-hero"><p class="kicker"><a href="/en/projects.html">Projects</a> · Web service</p><h1>Surf</h1><p>Is it worth going surfing right now?</p><div class="hero-actions"><a class="button primary" href="https://surf.voidstudio.top" target="_blank" rel="noopener">Open Surf ↗︎</a><a class="button" href="https://github.com/Mihailchik/surf" target="_blank" rel="noopener">Code on GitHub ↗︎</a></div></section>
+<section class="project-reel"><figure>
+<video id="surf-reel" width="1920" height="1080" poster="/assets/surf-showreel-cover.webp" muted loop playsinline preload="none" controls aria-label="Surf showreel, 15 seconds"><source src="/assets/surf-showreel-16x9.mp4" type="video/mp4"></video>
+<figcaption>A 15-second showreel. The interface on screen is the real one, showing an archived forecast from 11 October. The ocean lines around it are drawn, and the music was written for the film.</figcaption>
+</figure></section>
+
 
 <section class="project-what"><p class="kicker">What it is</p><p>To know whether there are waves today you have to open several weather sites and compare charts. Surf answers one question: is it worth going now, and to which beach. Waves, wind, tide and beach cameras for Phuket and Khao Lak sit on one page.</p></section>
 <section class="services"><p class="kicker">How it works</p><div class="service-grid"><article class="service"><span>01</span><h3>A score from 0 to 10</h3><p>Every hour at every beach gets a number and a word, from flat to epic. The score is rounded down so a beach is never worse than promised.</p></article><article class="service"><span>02</span><h3>Several models</h3><p>Data from Open-Meteo, MET Norway and NOAA is combined into a median. The spread between sources shows how far the forecast can be trusted.</p></article><article class="service"><span>03</span><h3>No server</h3><p>It is a single static page. Data is loaded straight in the browser, with no sign-up and no keys.</p></article><article class="service"><span>04</span><h3>Forecast history</h3><p>Every morning the site records what the forecast promised and what the models show for the day that passed. This makes it clear where the forecast is wrong.</p></article><article class="service"><span>05</span><h3>Three languages</h3><p>The interface is in English, Russian and Thai.</p></article></div><p class="stack"><span>Built with:</span> Vanilla JS · Open-Meteo · MET Norway · NOAA · GitHub Pages</p></section>
@@ -86,4 +91,5 @@
 <script src="/assets/track.js" defer></script>
 <script>window.shareConfig={position:"bottom-right"};</script>
 <script src="/assets/share.js" defer></script>
+<script src="/assets/reel.js?v=3" defer></script>
 </body></html>

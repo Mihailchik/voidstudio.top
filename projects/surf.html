@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/assets/img/favicon-64.png" type="image/png" sizes="64x64">
 <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/site.css?v=9">
+<link rel="stylesheet" href="/assets/site.css?v=10">
 <link rel="stylesheet" href="/assets/services.css?v=4">
 <script type="application/ld+json">
 {
@@ -75,6 +75,11 @@
 <body><header class="site-header"><a class="site-logo" href="/" aria-label="Void Studio, визуальные работы"></a><nav aria-label="Основная навигация"><a href="/">Работы</a><a href="/projects.html">Проекты</a><a href="/studio.html#about">О студии</a><a class="nav-language" href="/en/projects/surf.html" lang="en" hreflang="en" aria-label="Переключить на английский">EN</a><a class="nav-contact" href="https://t.me/LuchkoOlga" target="_blank" rel="noopener">Написать ↗︎</a></nav></header>
 <main>
 <section class="service-hero project-hero"><p class="kicker"><a href="/projects.html">Проекты</a> · Веб-сервис</p><h1>Surf</h1><p>Стоит ли ехать на серфинг прямо сейчас?</p><div class="hero-actions"><a class="button primary" href="https://surf.voidstudio.top" target="_blank" rel="noopener">Открыть Surf ↗︎</a><a class="button" href="https://github.com/Mihailchik/surf" target="_blank" rel="noopener">Код на GitHub ↗︎</a></div></section>
+<section class="project-reel"><figure>
+<video id="surf-reel" width="1920" height="1080" poster="/assets/surf-showreel-cover.webp" muted loop playsinline preload="none" controls aria-label="Видеовизитка Surf, 15 секунд"><source src="/assets/surf-showreel-16x9.mp4" type="video/mp4"></video>
+<figcaption>Видеовизитка, 15 секунд. На экране настоящий интерфейс и архив прогноза за 11 октября. Линии океана вокруг интерфейса нарисованы, музыка написана для ролика.</figcaption>
+</figure></section>
+
 
 <section class="project-what"><p class="kicker">Что это</p><p>Чтобы понять, есть ли сегодня волна, приходится открывать несколько погодных сайтов и сравнивать графики. Surf отвечает на один вопрос: стоит ли ехать сейчас и на какой пляж. Волна, ветер, прилив и камеры пляжей Пхукета и Као Лака собраны на одной странице.</p></section>
 <section class="services"><p class="kicker">Как устроено</p><div class="service-grid"><article class="service"><span>01</span><h3>Оценка от 0 до 10</h3><p>Каждый час у каждого пляжа получает число и слово, от «плоско» до «лучше не бывает». Оценка округляется вниз, чтобы пляж не оказался хуже обещанного.</p></article><article class="service"><span>02</span><h3>Несколько моделей</h3><p>Данные Open-Meteo, MET Norway и NOAA сводятся в медиану. Разброс между источниками показывает, насколько прогнозу можно верить.</p></article><article class="service"><span>03</span><h3>Без сервера</h3><p>Это одна статическая страница. Данные загружаются прямо в браузере, без регистрации и ключей.</p></article><article class="service"><span>04</span><h3>История прогнозов</h3><p>Каждое утро записывается, что обещал прогноз и что показали модели за прошедший день. Так видно, где прогноз ошибается.</p></article><article class="service"><span>05</span><h3>Три языка</h3><p>Интерфейс на английском, русском и тайском.</p></article></div><p class="stack"><span>На чём сделано:</span> Vanilla JS · Open-Meteo · MET Norway · NOAA · GitHub Pages</p></section>
@@ -86,4 +91,5 @@
 <script src="/assets/track.js" defer></script>
 <script>window.shareConfig={position:"bottom-right"};</script>
 <script src="/assets/share.js" defer></script>
+<script src="/assets/reel.js?v=3" defer></script>
 </body></html>
