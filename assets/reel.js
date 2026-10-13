@@ -10,7 +10,7 @@
 
   // Ищем по месту в разметке, а не по атрибуту preload: скрипт сам меняет его
   // на auto, и выборка по атрибуту переставала находить своё же видео.
-  const reels = document.querySelectorAll('.project-reel video');
+  const reels = document.querySelectorAll('.hero-media video, .project-reel video');
   if (!reels.length) return;
 
   // Если человек выключил анимацию в системе, ролик не запускаем сам:
@@ -51,4 +51,23 @@
   }
 
   reels.forEach((video) => watcher.observe(video));
+
+  // Если страницу открыли в фоновой вкладке, браузер не считает её видимой и
+  // наблюдатель молчит. Когда человек переключится на вкладку, догоняем.
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) return;
+    reels.forEach((video) => {
+      const box = video.getBoundingClientRect();
+      const onScreen = box.top < innerHeight && box.bottom > 0;
+      if (!onScreen) return;
+      if (!video.dataset.started) {
+        video.dataset.started = 'yes';
+        video.preload = 'auto';
+        video.addEventListener('loadeddata', () => start(video), { once: true });
+        video.load();
+        return;
+      }
+      start(video);
+    });
+  });
 })();
