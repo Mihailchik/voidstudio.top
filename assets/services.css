@@ -92,3 +92,33 @@
   .project-service{margin:70px 6% 0;padding:24px}
   .other-service small{display:block;margin:6px 0 0}
 }
+/* Первый экран проекта: смысл слева, картинка или видео справа.
+   Задача — уместить название, суть и кнопки без прокрутки. */
+.project-hero.has-media{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);
+  gap:4vw;align-items:center;padding:52px 5vw 56px}
+.project-hero.has-media h1{font-size:clamp(40px,4.6vw,72px);margin:14px 0 18px}
+.project-hero.has-media .hero-text>p:not(.kicker){font-size:19px;margin-bottom:16px;max-width:46ch}
+.project-hero.has-media .hero-lead{font-size:16px;line-height:1.65;color:var(--muted);margin-bottom:26px}
+.project-hero.has-media .hero-actions{margin-top:0;flex-wrap:wrap}
+.hero-media{min-width:0}
+.hero-media video,.hero-media img{display:block;width:100%;height:auto;max-height:62vh;
+  object-fit:contain;border-radius:14px;background:#0f1b2d}
+.hero-media figure{margin:0}
+@media(max-width:900px){
+  .project-hero.has-media{grid-template-columns:1fr;gap:26px;padding:34px 6% 40px}
+  .project-hero.has-media h1{font-size:clamp(38px,11vw,60px)}
+  .hero-media video,.hero-media img{max-height:none}
+}
+/* Нарисованные карточки для проектов без скриншотов. */
+.drawn-card{border-radius:14px;padding:34px 30px;min-height:330px;display:flex;
+  flex-direction:column;justify-content:center;gap:18px;text-align:center}
+.poster-card{background:#e7ece4;color:#1d2a1c}
+.podcast-card{background:#e4e8ef;color:#172033}
+.drawn-top{font:500 15px/1.3 ui-monospace,SFMono-Regular,Menlo,monospace;
+  letter-spacing:.08em;text-transform:uppercase;opacity:.75;margin:0}
+.drawn-flow{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.drawn-flow span{background:#fff;border-radius:9px;padding:13px 10px;font-size:15px;font-weight:500}
+.drawn-arrow{font-size:26px;opacity:.5;line-height:1}
+.drawn-channel{background:#fff;border-radius:9px;padding:17px;font-size:21px;font-weight:600}
+.drawn-note{margin:0;font-size:13px;opacity:.65}
+@media(max-width:900px){.drawn-card{min-height:240px;padding:28px 22px}}
