@@ -42,6 +42,32 @@ python3 -m http.server 4173
 
 Ничего не считается руками: сколько работ показать, страница берёт из данных.
 
+## Стрелки и эмодзи
+
+У знаков `↗` `↘` `©` в юникоде есть два начертания: обычное и цветное эмодзи.
+Браузер на компьютере выбирает обычное, iPhone по умолчанию берёт цветное:
+на айфоне стрелка в ссылках показывалась синей, как эмодзи, хотя в вёрстке
+это обычный символ.
+
+Лечится знаком `U+FE0E` сразу после символа. Он невидимый и требует текстовое
+начертание. В коде стрелка выглядит как `↗︎`, в редакторе разницы не видно.
+
+Проверить, что нигде не осталось незащищённых:
+
+```bash
+python3 - <<'EOF'
+import pathlib
+for p in pathlib.Path('.').rglob('*.html'):
+    t = p.read_text(encoding='utf-8')
+    for ch in ('\u2197', '\u2198', '\u00a9'):
+        i = 0
+        while (i := t.find(ch, i)) != -1:
+            if i + 1 >= len(t) or t[i + 1] != '\ufe0e':
+                print(p, 'без защиты:', hex(ord(ch)))
+            i += 1
+EOF
+```
+
 ## Инструменты
 
 `tools/` не публикуется, файлы исключены через `.vercelignore`.
@@ -99,6 +125,19 @@ python3 -m http.server 4173
   `mask`, so they take any colour.
 
 Nothing is counted by hand: how many works to show comes from the data.
+
+## Arrows and emoji
+
+The characters `↗` `↘` `©` have two renderings in Unicode: plain text and
+colour emoji. Desktop browsers pick the plain one, iPhone defaults to the emoji:
+on iPhone the arrow in links showed up blue even though the markup has an
+ordinary character.
+
+The fix is `U+FE0E` right after the character. It is invisible and demands the
+text rendering. In the source the arrow reads as `↗︎`; an editor shows no
+difference.
+
+The snippet in the Russian section above checks that none are left unguarded.
 
 ## Tools
 
