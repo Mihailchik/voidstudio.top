@@ -90,7 +90,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     if (work.kind === 'video') {
       const video = document.createElement('video');
       video.dataset.src = work.src;
-      video.poster = thumbnailFor(work.poster);
+      video.poster = work.videoPoster || thumbnailFor(work.poster);
       video.muted = true;
       video.loop = true;
       video.preload = 'metadata';
@@ -372,12 +372,13 @@ function createFilmstrip(works, { reduced = false } = {}) {
       card.style.height = `${layout.h}px`;
       card.style.transform = `translate3d(${center - layout.w / 2}px,${layout.y - layout.h / 2}px,0)`;
       card.querySelectorAll('img,video').forEach(media => {
-        media.style.objectFit = fit > .5 && i === current ? 'contain' : 'cover';
+        media.style.objectFit = fit > .5 && Math.abs(i - position) < .5 ? 'contain' : 'cover';
       });
       if (visible) renderer?.draw(i, {
         x: center, y: layout.y, w: layout.w, h: layout.h,
         pointer: followX, hover: reduced ? 0 : hover, expansion,
-        velocity, highlight, selectedness, fit: i === current ? fit : 0
+        velocity, highlight, selectedness,
+        fit: fit * clamp(1 - Math.abs(i - position), 0, 1)
       });
       if (!renderer?.ready) {
         card.style.transform += ` scaleY(${1 + proximity * .22 * (1 - expansion)})`;
