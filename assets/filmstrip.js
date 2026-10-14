@@ -156,12 +156,33 @@ function createFilmstrip(works, { reduced = false } = {}) {
     soundButton.textContent = enabled ? copy.soundOff : copy.soundOn;
   }
 
+  // Пропорции работы: пока картинка не загрузилась, считаем кадр вертикальным,
+  // как большинство работ в ленте.
+  function ratioAt(index) {
+    // У видео спрашиваем его собственные пропорции: обложка в ленте может быть
+    // другой формы, как у видеовизитки с вертикальной карточкой.
+    const video = videos[index];
+    if (video && video.videoWidth) return video.videoWidth / video.videoHeight;
+    const fromGl = renderer?.ratio(index);
+    if (fromGl) return fromGl;
+    const image = images[index];
+    if (image && image.naturalWidth) return image.naturalWidth / image.naturalHeight;
+    return 9 / 16;
+  }
+
+  // В раскрытом виде рамка принимает пропорции самой работы и вписывается в
+  // отведённое поле. Так кадр виден целиком и не висит в пустых полях.
   function dimensions() {
     const mobile = width < 700;
     const smallWidth = mobile ? 34 : clamp(width * .0375, 42, 62);
     const smallHeight = mobile ? Math.min(156, height * .23) : clamp(height * .255, 145, 236);
-    const bigWidth = width * (mobile ? .78 : .495);
-    const bigHeight = mobile ? Math.min(height * .34, bigWidth * 1.05) : height * .5;
+    const first = clamp(Math.floor(position), 0, works.length - 1);
+    const next = clamp(first + 1, 0, works.length - 1);
+    const ratio = lerp(ratioAt(first), ratioAt(next), clamp(position - first, 0, 1));
+    const roomW = width * (mobile ? .86 : .62);
+    const roomH = mobile ? height * .46 : height * .74;
+    let bigWidth = roomW, bigHeight = roomW / ratio;
+    if (bigHeight > roomH) { bigHeight = roomH; bigWidth = roomH * ratio; }
     return {
       w: lerp(smallWidth, bigWidth, expansion),
       h: lerp(smallHeight, bigHeight, expansion),
@@ -282,7 +303,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     frameRail.inert = !value;
     projectCopy.setAttribute('aria-hidden', String(!value));
     hoverGoal = 0;
-    resetFit(Boolean(value));
+    resetFit();
     if (!value) {
       syncVideoPlayback(-1);
       syncSoundControl(-1);
@@ -304,20 +325,18 @@ function createFilmstrip(works, { reduced = false } = {}) {
   function close() { if (expandTo) changeScale(0); }
   function goTo(index) {
     target = clamp(index, 0, works.length - 1);
-    resetFit(Boolean(expandTo));
+    resetFit();
     wake();
   }
   // В ленте кадр заполняет карточку целиком, в раскрытом виде работа
   // показывается полностью: обрезать её по краям там незачем, а у высоких
   // кадров так терялась половина картинки.
-  function resetFit(expanded) {
-    fitGoal = expanded ? 1 : 0;
-    section.dataset.fit = expanded ? 'full' : 'crop';
+  function resetFit() {
+    fitGoal = 0;
+    section.dataset.fit = 'crop';
     if (fitButton) {
-      fitButton.setAttribute('aria-pressed', String(Boolean(expanded)));
-      fitButton.innerHTML = expanded
-        ? `${copy.restore} <span>−</span>`
-        : `${copy.examine} <span>+</span>`;
+      fitButton.setAttribute('aria-pressed', 'false');
+      fitButton.innerHTML = `${copy.examine} <span>+</span>`;
     }
   }
   function toggleFit() {
@@ -404,7 +423,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
     const delta = raw * (event.deltaMode === 1 ? 16 : event.deltaMode === 2 ? width : 1);
     const layout = dimensions();
     target = clamp(target + delta * (expandTo ? 1.15 : .14) / (layout.w + layout.gap), 0, works.length - 1);
-    resetFit(Boolean(expandTo));
+    resetFit();
     clearTimeout(wheelTimer);
     if (expandTo) wheelTimer = setTimeout(() => { target = Math.round(target); wake(); }, 160);
     wake();
@@ -449,7 +468,7 @@ function createFilmstrip(works, { reduced = false } = {}) {
       const fling = reduced || event.type === 'pointercancel' ? 0 : clamp(freshVelocity * 120 / (layout.w + layout.gap), -2.8, 2.8);
       target = clamp(target - fling, 0, works.length - 1);
       if (expandTo) target = Math.round(target);
-      resetFit(Boolean(expandTo));
+      resetFit();
     }
     drag = null;
     stage.classList.remove('dragging');
@@ -571,6 +590,7 @@ function createRibbonRenderer(canvas) {
   });
   return {
     get ready() { return ready; },
+    ratio(index) { return ratios[index]; },
     upload(index, image) {
       if (!ready) return;
       const texture = gl.createTexture();
